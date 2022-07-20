@@ -1,0 +1,279 @@
+<style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800,300);
+ @import url(https://fonts.googleapis.com/css?family=Yesteryear&#39;);
+ body {
+	 background: #643a7a;
+}
+ .frame {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 400px;
+	 height: 400px;
+	 margin-top: -200px;
+	 margin-left: -200px;
+	 border-radius: 2px;
+	 box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
+	 overflow: hidden;
+	 background: #201c29;
+	 color: #fff;
+	 font-family: &#39;
+	Open Sans&#39;
+	, Helvetica, sans-serif;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+}
+ .circle {
+	 position: absolute;
+	 z-index: 10;
+	 height: 20px;
+	 width: 20px;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 background-image: linear-gradient(45deg, #ff049f, #9a0fe0 45%);
+	 border-radius: 50%;
+	 animation: circle 1s ease-in-out;
+	 animation-fill-mode: forwards;
+}
+ .line {
+	 position: absolute;
+	 z-index: 10;
+	 width: 150px;
+	 height: 1px;
+	 top: 198px;
+	 transform: scaleX(0);
+}
+ .line.left {
+	 left: 50px;
+	 transform-origin: 100% 50%;
+	 animation: lines 1s ease-in-out 0.8s, line-left 1s steps(1) 0.8s;
+	 background: rgba(255, 255, 255, 0.7);
+}
+ .line.right {
+	 right: 50px;
+	 background: rgba(255, 255, 255, 0.7);
+	 transform-origin: 0% 50%;
+	 animation: lines 1s ease-in-out 0.8s, line-right 1s steps(1) 0.8s;
+}
+ .bracket {
+	 position: absolute;
+	 z-index: 10;
+	 height: 130px;
+	 width: 1px;
+	 top: 137px;
+	 background: rgba(255, 255, 255, 0.7);
+	 animation: bracket 0.4s ease-out 1.7s;
+	 animation-fill-mode: both;
+}
+ .bracket:before, .bracket:after {
+	 position: absolute;
+	 display: block;
+	 content: &#39;
+	&#39;
+	;
+	 width: 25px;
+	 height: 1px;
+}
+ .bracket.right:before, .bracket.right:after {
+	 background: rgba(255, 255, 255, 0.7);
+}
+ .bracket.left {
+	 left: 50px;
+}
+ .bracket.left:before {
+	 top: 0;
+	 left: 0;
+	 transform-origin: 0% 50%;
+	 animation: bracket-line 0.2s ease-out 2.1s;
+	 animation-fill-mode: both;
+}
+ .bracket.left:after {
+	 bottom: 0;
+	 left: 0;
+	 transform-origin: 0% 50%;
+	 animation: bracket-line 0.2s ease-out 2.1s;
+	 animation-fill-mode: both;
+}
+ .bracket.left:before, .bracket.left:after {
+	 background: rgba(255, 255, 255, 0.7);
+}
+ .bracket.right {
+	 right: 50px;
+}
+ .bracket.right:before {
+	 top: 0;
+	 right: 0;
+	 transform-origin: 100% 50%;
+	 animation: bracket-line 0.2s ease-out 2.1s;
+	 animation-fill-mode: both;
+}
+ .bracket.right:after {
+	 bottom: 0;
+	 right: 0;
+	 transform-origin: 100% 50%;
+	 animation: bracket-line 0.2s ease-out 2.1s;
+	 animation-fill-mode: both;
+}
+ .big {
+	 position: absolute;
+	 z-index: 5;
+	 top: 173px;
+	 width: 400px;
+	 text-align: center;
+	 font-size: 5rem;
+	 letter-spacing: 2px;
+	 color: #fff;
+	 line-height: 50px;
+	 font-family: &#34;
+	yesteryear&#34;
+	, cursive;
+	 background-image: linear-gradient(33deg, #9a0fe0 25%, #ff049f);
+	 -webkit-text-fill-color: transparent;
+	 background-clip: text;
+	 transition: 0.2s ease-in;
+}
+ .hide {
+	 position: absolute;
+	 z-index: 7;
+	 width: 400px;
+	 height: 50px;
+	 background: #201c29;
+	 left: 0;
+	 animation: reveal 0.4s ease-out 1.7s;
+	 animation-fill-mode: both;
+}
+ .hide.top {
+	 bottom: 49%;
+	 transform-origin: 50% 0%;
+}
+ .hide.bottom {
+	 top: 49%;
+	 transform-origin: 50% 100%;
+}
+ .small {
+	 position: absolute;
+	 z-index: 10;
+	 width: 400px;
+	 text-align: center;
+	 left: 0;
+	 font-weight: 300;
+	 font-size: 1.8rem;
+	 color: #fff;
+	 line-height: 30px;
+	 word-spacing: 0.7rem;
+	 text-transform: uppercase;
+}
+ .first-letter {
+	 font-family: yesteryear, cursive;
+	 font-size: 3.5rem;
+	 background-image: linear-gradient(33deg, #9a0fe0 25%, #ff049f);
+	 -webkit-text-fill-color: transparent;
+	 background-clip: text;
+}
+ .small.top {
+	 top: 8rem;
+	 animation: small-top 0.5s ease-out 2.2s;
+	 animation-fill-mode: both;
+}
+ .small.bottom {
+	 bottom: 8rem;
+	 animation: small-bottom 0.5s ease-out 2.2s;
+	 animation-fill-mode: both;
+}
+ @keyframes circle {
+	 0% {
+		 transform: scale(1);
+	}
+	 50% {
+		 transform: scale(1.1);
+	}
+	 90%, 100% {
+		 transform: scale(0);
+	}
+}
+ @keyframes lines {
+	 0% {
+		 transform: scaleX(0);
+	}
+	 50% {
+		 transform: scaleX(1);
+	}
+	 100% {
+		 transform: scaleX(0);
+	}
+}
+ @keyframes line-left {
+	 0% {
+		 transform-origin: 100% 50%;
+	}
+	 50%, 100% {
+		 transform-origin: 0% 50%;
+	}
+}
+ @keyframes line-right {
+	 0% {
+		 transform-origin: 0% 50%;
+	}
+	 50%, 100% {
+		 transform-origin: 100% 50%;
+	}
+}
+ @keyframes bracket {
+	 0% {
+		 transform: scaleY(0);
+	}
+	 100% {
+		 transform: scaleY(1);
+	}
+}
+ @keyframes bracket-line {
+	 0% {
+		 transform: scaleX(0);
+	}
+	 100% {
+		 transform: scaleX(1);
+	}
+}
+ @keyframes reveal {
+	 0% {
+		 transform: scaleY(1);
+	}
+	 100% {
+		 transform: scaleY(0);
+	}
+}
+ @keyframes small-top {
+	 0% {
+		 transform: translateX(-20px);
+		 opacity: 0;
+	}
+	 100% {
+		 transform: translateX(0);
+		 opacity: 1;
+	}
+}
+ @keyframes small-bottom {
+	 0% {
+		 transform: translateX(20px);
+		 opacity: 0;
+	}
+	 100% {
+		 transform: translateX(0);
+		 opacity: 1;
+	}
+}
+ </style>
+
+<div class="frame">
+	<div class="circle"></div>
+	<div class="line left"></div>
+	<div class="line right"></div>
+	<div class="bracket left"></div>
+	<div class="bracket right"></div>
+	<div class="small top"><span class="first-letter">c</span>ollect</div>
+	<div class="big">Moments</div>
+	<div class="small bottom">Not <span class="first-letter">T</span>hings</div>
+	<div class="hide top"></div>
+	<div class="hide bottom"></div>
+</div>
