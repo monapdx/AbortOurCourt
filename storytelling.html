@@ -679,7 +679,7 @@ img.icon {border:none;padding-right:2px;}
                     <li>
                         <a href="#">Activism</a>
                     </li>
-                    <li class="uk-active">
+                    <li>
                         <a href="news.html">News</a>
                     </li>
                     <li>
@@ -691,7 +691,7 @@ img.icon {border:none;padding-right:2px;}
                     <li>
                         <a href="slideshow.html">Conversations</a>
                     </li>
-                    <li>
+                    <li class="uk-active">
                         <a href="storytelling.html">Storytelling</a>
                     </li>
                 </ul>
@@ -713,10 +713,416 @@ img.icon {border:none;padding-right:2px;}
 
 
 
-<rssapp-wall id="U7439zJz11vrGpgr"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 
 
-<rssapp-wall id="Okse34dHYwNfCeD6"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#word_count").on('keyup', function() {
+    var words = 0;
+
+    if ((this.value.match(/\S+/g)) != null) {
+      words = this.value.match(/\S+/g).length;
+    }
+
+    if (words > 1000) {
+      // Split the string on first 200 words and rejoin on spaces
+      var trimmed = $(this).val().split(/\s+/, 1000).join(" ");
+      // Add a space at the end to make sure more typing creates new words
+      $(this).val(trimmed + " ");
+    }
+    else {
+      $('#display_count').text(words);
+      $('#word_left').text(1000-words);
+    }
+  });
+});  
+</script>
+
+
+<style type="text/css">
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Galaxy S6 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) {
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Google Pixel ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Google Pixel XL ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) {
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape) {
+
+}
+
+/* ----------- Galaxy Tab 2 ----------- */
+
+/* Portrait and Landscape */
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px) {
+
+}
+
+/* Portrait */
+@media 
+  (max-device-width: 800px) 
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media 
+  (max-device-width: 1280px) 
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- Galaxy Tab S ----------- */
+
+/* Portrait and Landscape */
+@media 
+  (min-device-width: 800px) 
+  and (max-device-width: 1280px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media 
+  (max-device-width: 800px) 
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Landscape */
+@media 
+  (max-device-width: 1280px) 
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+@media screen and (-webkit-device-pixel-ratio: 1.5), screen and (resolution: 144dpi)
+
+
+
+div.centered {
+  height: 100%;
+  display: grid;
+}
+
+
+textarea {margin:auto;border:2px solid #ccc;background-color:#fff;font-family: 'Fjalla One', sans-serif;font-size:18px;padding:10px;}
+textarea:focus {
+  background:#F2F2F2;
+}
+
+h1 {font-family: 'Lobster', cursive;font-size:55px;color:#000;}
+h1:hover {font-family: 'Lobster', cursive;font-size:55px;color:#ff02a0;}
+p {font-family: 'Fjalla One', sans-serif;font-size:26px;color:#000;}
+p.heading {font-family: 'Lobster', cursive;font-size:32px;color:#000;}
+#word_count {font-family: 'Fjalla One', sans-serif;font-size:26px;}
+#display_count {font-family: 'Fjalla One', sans-serif;font-size:26px;color:#ff02a0;}
+#word_left {font-family: 'Fjalla One', sans-serif;font-size:26px;color:#ff02a0;}
+
+a {font-family: 'Fjalla One', sans-serif;font-size:18px;color:#ff02a0;}
+a:hover {font-family: 'Fjalla One', sans-serif;font-size:18px;color:#02ccf9;}
+
+</style>
+
+
+
+
+<div class="centered">
+<h1>Share Your Abortion Story</h1><textarea name="txtScript" id="word_count" cols="100" rows="10"></textarea>
+
+<p><b>Total word count:</b> <span id="display_count">0</span> words <br>Words left: <span id="word_left">1000</span></p>
+<br><br><br><audio controls id="audioplayer" src="https://gdurl.com/Lzmj">
+<div style="border: 1px solid black ; padding: 8px ;">
+Sorry, your browser does not support the &lt;audio&gt; tag used in this demo.
+</div>
+</audio>
+<p class="heading"><b>Ready to submit?</b></p>
+<a href="https://bodiesofstories.com/yourstory">https://bodiesofstories.com/yourstory</a>
+
+
+
+
+</div>
 
 
 
@@ -736,33 +1142,7 @@ img.icon {border:none;padding-right:2px;}
 
                 </div>
 
-                <div class="uk-width-medium-1-4">
-                    <div class="uk-panel uk-panel-box uk-text-center">
-                        <img class="uk-border-circle" width="120" height="120" src="https://github.com/ashloren/AbortOurCourt/blob/main/3d-a.png?raw=true" alt="">
-                        <h3>@AbortOurCourt</h3>
-                        <p class="topics">Reproductive freedom | Pro-choice | Abortion | Feminism</p>
-                    </div>
-                    <div class="uk-panel">
-                        <h3 class="uk-panel-title">Categories</h3>
-                        <ul class="uk-list uk-list-line">
-                            <li><img class="icon" src="https://github.com/ashloren/AbortOurCourt/blob/main/heart.png?raw=true"><a href="#">Reproductive Rights</a></li>
-                            <li><img class="icon" src="https://github.com/ashloren/AbortOurCourt/blob/main/heart.png?raw=true"><a href="#">Abortion</a></li>
-                            <li><img class="icon" src="https://github.com/ashloren/AbortOurCourt/blob/main/heart.png?raw=true"><a href="#">Social Media</a></li>
-                            <li><img class="icon" src="https://github.com/ashloren/AbortOurCourt/blob/main/heart.png?raw=true"><a href="#">Toolkits</a></li>
-                            <li><img class="icon" src="https://github.com/ashloren/AbortOurCourt/blob/main/heart.png?raw=true"><a href="#">Organizations</a></li>
-                        </ul>
-                    </div>
-                    <div class="uk-panel">
-                        <h3 class="uk-panel-title">Social Links</h3>
-                        <ul class="uk-list">
-                            <li><img class="icon" src="https://github.com/ashloren/AbortOurCourt/blob/main/twitter-icon.png?raw=true"><a href="https://twitter.com/abortourcourt">AbortOurCourt</a></li>
-                            <li><img class="icon" src="https://github.com/ashloren/AbortOurCourt/blob/main/gmail.png?raw=true"><a href="#">AbortSupremeCourt</a></li>
-                            <li><img class="icon" src="https://github.com/ashloren/AbortOurCourt/blob/main/youtube.png?raw=true"><a href="#">Youtube</a></li>
-							<li><img class="icon" src="https://github.com/ashloren/AbortOurCourt/blob/main/external.png?raw=true"><a href="#">Website</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+               
 
         </div>
 
