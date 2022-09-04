@@ -1,0 +1,110 @@
+/* grid */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+
+}
+
+/* items */
+.container > * {
+  color: #000;
+  font-size: 1.2em;
+  line-height: 1.5;
+  padding: 20px;
+  background:#ff0076;
+  
+}
+
+/* nav styles */
+.container nav {
+  background: #02ccf9;
+  border-top: 3px solid #1C86EE;
+  border-bottom:3px solid #1C86EE;
+  border-right:none;
+  border-left:none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  font-family: 'Galada', cursive;
+  font-size:24px;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+/* media query for grid layout */
+@media only screen and (min-width: 600px) {
+    
+  /* grid */
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* specific item styles */
+  .container header,
+  .container nav,
+  .container footer {
+    grid-column: span 4;
+
+  }
+  .container section {
+    grid-column: span 3;
+	  background: #fff;
+  }
+  
+  /* nav styles */
+  nav ul li {
+    display: inline-block;
+    padding: 0 20px 0 0;
+  }
+  
+  /* hide toggle */
+  .toggle {
+    display: none;
+  }
+  
+}
+
+/* media query for nav styles */
+@media only screen and (max-width: 599px) {
+  
+    #nav {
+      transition: transform .3s ease-in-out;
+      top: 0;
+      bottom: 0;   
+      min-height: 100vh; /* override Safari bug */
+      position: fixed; /* or choose `absolute` depending on desired behavior*/
+      width: 300px;
+      left: -340px;
+	   background: #02ccf9;
+    }
+  
+    #nav:target {     
+      transform: translateX(340px);
+    }
+  
+    .close {
+      text-align: right;
+      display: block;
+      text-decoration: none;
+      font-size: 3em;
+      position: relative;
+      top: -30px;
+    }
+  
+}
+
+h1 {font-family: 'Galada', cursive;color:#fff;font-size:38px;font-weight:bold;text-align:center;}
+h2 {font-family: 'Fjalla One', sans-serif;font-size:28x;color:#ff0076;padding:10px;padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;}
+h3 {font-family: 'Galada', cursive;color:#fff;font-size:28px;font-weight:bold;}
+p {font-family: 'Raleway', sans-serif;font-size:14px;color:#000;padding:10px;}
+aside {background:#fff;}
