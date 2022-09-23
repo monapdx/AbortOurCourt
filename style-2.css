@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 5px;
-
+  background-color: #000;
 
 }
 
@@ -13,7 +13,7 @@
   font-size: 1.2em;
   line-height: 1.5;
   padding: 20px;
-  background-color: #ff02a0;
+  background-color: #000;
   	 
 }
 
@@ -62,7 +62,7 @@ nav a:hover {
   }
   .container section {
     grid-column: span 3;
-	  background: #fff;
+	  background: #000;
   }
   
   /* nav styles */
