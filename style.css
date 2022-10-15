@@ -2,18 +2,21 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 5px;
+  grid-gap: 10px;
+  font-family: 'Raleway', sans-serif;font-size:14px;color:#fff;padding:10px;
+
 
 
 }
 
 /* items */
 .container > * {
-  color: #000;
-  font-size: 1.2em;
+font-family: 'Raleway', sans-serif;font-size:14px;color:#fff;padding:10px;
   line-height: 1.5;
   padding: 20px;
-  background-color: #ff02a0;
+  background-color:#ff02a0;
+
+
   	 
 }
 
@@ -131,13 +134,14 @@ h1 {font-family: 'Galada', cursive;color:#fff;font-size:38px;font-weight:bold;te
 h2 {font-family: 'Galada', cursive;font-size:108x;color:#02ccf9;padding:10px;padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;}
 h3 {font-family: 'Galada', cursive;color:#000;font-size:30px;font-weight:bold;background-color:honeydew;padding:5px;}
 h3:hover {font-family: 'Galada', cursive;color:#ff02a0;font-size:30px;font-weight:bold;background-color:honeydew;padding:5px;}
-p {font-family: 'Raleway', sans-serif;font-size:16px;color:#000;padding:10px;}
+p {font-family: 'Raleway', sans-serif;font-size:14px;color:#fff;padding:10px;}
 aside {background:#fff;}
-
-	
+p.black {font-family: 'Raleway', sans-serif;font-size:18px;color:#000;padding:10px;}
+a.black {font-family: 'Raleway', sans-serif;font-size:18px;color:#cc007d;font-weight:bold;}
+a.black:hover {font-family: 'Raleway', sans-serif;font-size:18px;color:#ff02a0;font-weight:bold;text-decoration:underline;}	
 	img.gal {padding:5px;}
 
-	a.reg {font-family: 'Raleway', sans-serif;font-size:16px;color:#cc007d;font-weight:bold;}
+	a.reg {font-family: 'Raleway', sans-serif;font-size:14px;color:#02ccf9;font-weight:bold;}
 	a.reg:hover {font-family: 'Raleway', sans-serif;font-size:16px;color:#ff02a0;font-weight:bold;text-decoration:none;}
 	
 	img.gal {padding:5px;}
