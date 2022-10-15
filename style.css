@@ -142,6 +142,6 @@ a.black:hover {font-family: 'Raleway', sans-serif;font-size:18px;color:#ff02a0;f
 	img.gal {padding:5px;}
 
 	a.reg {font-family: 'Raleway', sans-serif;font-size:14px;color:#02ccf9;font-weight:bold;}
-	a.reg:hover {font-family: 'Raleway', sans-serif;font-size:14px;color:#fff;font-weight:bold;text-decoration:none;}
+	a.reg:hover {font-family: 'Raleway', sans-serif;font-size:14px;color:#fff;font-weight:bold;text-decoration:underline;}
 	
 	img.gal {padding:5px;}
