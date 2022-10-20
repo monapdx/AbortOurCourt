@@ -145,3 +145,5 @@ a.black:hover {font-family: 'Raleway', sans-serif;font-size:18px;color:#ff02a0;f
 	a.reg:hover {font-family: 'Raleway', sans-serif;font-size:14px;color:#fff;font-weight:bold;text-decoration:underline;}
 	
 	img.gal {padding:5px;}
+	a.cursive {font-family: 'Galada', cursive;color:#fff;font-size:22px;text-decoration:none;}
+	a.cursive:hover {font-family: 'Galada', cursive;color:honeydew;font-size:22px;text-decoration:underline;}
