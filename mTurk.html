@@ -1,0 +1,56 @@
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+html{font-family: 'Raleway', sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;background:#fff;color:#000}
+textarea {margin:auto;border:2px solid #ccc;background-color:#fff;font-family: 'Fjalla One', sans-serif;font-size:18px;padding:10px;}
+textarea:focus {
+  background:#F2F2F2;
+}
+
+h1 {font-family: 'Lobster', cursive;font-size:55px;color:#000;}
+h1:hover {font-family: 'Lobster', cursive;font-size:55px;color:#ff02a0;}
+p {font-family: 'Fjalla One', sans-serif;font-size:26px;color:#000;}
+p.heading {font-family: 'Lobster', cursive;font-size:32px;color:#000;}
+#word_count {font-family: 'Fjalla One', sans-serif;font-size:26px;}
+#display_count {font-family: 'Fjalla One', sans-serif;font-size:26px;color:#ff02a0;}
+#word_left {font-family: 'Fjalla One', sans-serif;font-size:26px;color:#ff02a0;}
+
+a {font-family: 'Fjalla One', sans-serif;font-size:18px;color:#ff02a0;}
+a:hover {font-family: 'Fjalla One', sans-serif;font-size:18px;color:#02ccf9;}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#word_count").on('keyup', function() {
+    var words = 0;
+
+    if ((this.value.match(/\S+/g)) != null) {
+      words = this.value.match(/\S+/g).length;
+    }
+
+    if (words > 1000) {
+      // Split the string on first 200 words and rejoin on spaces
+      var trimmed = $(this).val().split(/\s+/, 1000).join(" ");
+      // Add a space at the end to make sure more typing creates new words
+      $(this).val(trimmed + " ");
+    }
+    else {
+      $('#display_count').text(words);
+      $('#word_left').text(1000-words);
+    }
+  });
+});  
+</script>
+
+
+<div class="centered"> <h1>Share Your Abortion Story</h1><textarea name="txtScript" id="word_count" cols="100" rows="10"></textarea> <p><b>Total word count:</b> <span id="display_count">0</span> words <br>Words left: <span id="word_left">1000</span></p> <br><br><br><audio controls id="audioplayer" src="https://gdurl.com/Lzmj"> <div style="border: 1px solid black ; padding: 8px ;"> Sorry, your browser does not support the &lt;audio&gt; tag used in this demo. </div> </audio> <p class="heading"><b>Ready to submit?</b></p> <a href="https://bodiesofstories.com/yourstory">https://bodiesofstories.com/yourstory</a> </div> </p> 						 						 </article> </div> </div>
