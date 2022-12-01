@@ -59,7 +59,7 @@ nav a:hover {
   .container header,
   .container nav,
   .container footer {
-    grid-column: span 6;
+    grid-column: span 5;
 
 
   }
@@ -140,6 +140,7 @@ aside {background:#fff;}
 p.black {font-family: 'Raleway', sans-serif;font-size:18px;color:#000;padding:10px;}
 a.black {font-family: 'Raleway', sans-serif;font-size:18px;color:#cc007d;font-weight:bold;}
 a.black:hover {font-family: 'Raleway', sans-serif;font-size:18px;color:#ff02a0;font-weight:bold;text-decoration:underline;}	
+p.aside {width:250px;font-family: 'Raleway', sans-serif;font-size:14px;color:#000;padding:5px;background-color:honeydew;border:3px solid #A8E6CE;}
 	img.gal {padding:5px;}
 
 	a.reg {font-family: 'Raleway', sans-serif;font-size:14px;color:#02ccf9;font-weight:bold;}
