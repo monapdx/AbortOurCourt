@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
-  font-family: 'Raleway', sans-serif;font-size:14px;color:#fff;padding:10px;
+  font-family: 'Raleway', sans-serif;font-size:14px;color:#000;padding:10px;
 
 
 
@@ -11,10 +11,10 @@
 
 /* items */
 .container > * {
-font-family: 'Raleway', sans-serif;font-size:14px;color:#fff;padding:10px;
+font-family: 'Raleway', sans-serif;font-size:14px;color:#000;padding:10px;
   line-height: 1.5;
   padding: 20px;
-  background-color:#ff02a0;
+  background-color:#fff;
 
 
   	 
@@ -24,7 +24,7 @@ font-family: 'Raleway', sans-serif;font-size:14px;color:#fff;padding:10px;
 
 /* nav styles */
 .container nav {
-  background: #02ccf9;
+  background: #fff;
   border-top: 3px solid #1C86EE;
   border-bottom:3px solid #1C86EE;
   border-right:none;
@@ -38,7 +38,7 @@ nav ul {
 }
 
 nav a {
-  color: #fff;
+  color: #000;
   font-family: 'Galada', cursive;
   font-size:24px;
 }
@@ -52,14 +52,14 @@ nav a:hover {
     
   /* grid */
   .container {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
   
   /* specific item styles */
   .container header,
   .container nav,
   .container footer {
-    grid-column: span 6;
+    grid-column: span 5;
 
 
   }
@@ -126,24 +126,35 @@ nav a:hover {
     }
 }
 
-ol {}
-ol li {font-family:'Galada', cursive;color:#000;font-size:30px;font-weight:bold;background-color:honeydew;padding:5px;}
-ol li:hover {'Galada', cursive;color:#ff0076;font-size:30px;font-weight:bold;}
+ul {}
+ul li {font-family:'Galada', cursive;color:#000;font-size:16px;font-weight:bold;padding:5px;}
+ul li:hover {'Galada', cursive;color:#ff0076;font-size:16px;font-weight:bold;}
 
-h1 {font-family: 'Galada', cursive;color:#fff;font-size:38px;font-weight:bold;text-align:center;}
-h2 {font-family: 'Galada', cursive;font-size:108x;color:#02ccf9;padding:10px;padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;}
+h1 {font-family: 'Galada', cursive;color:rgb(255, 2, 160);font-size:38px;font-weight:bold;text-align:center;}
+h2 {font-family: 'Galada', cursive;font-size:36px;color:#02ccf9;padding:10px;padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;}
 h3 {font-family: 'Galada', cursive;color:#000;font-size:30px;font-weight:bold;background-color:honeydew;padding:5px;}
 h3:hover {font-family: 'Galada', cursive;color:#ff02a0;font-size:30px;font-weight:bold;background-color:honeydew;padding:5px;}
 p {font-family: 'Raleway', sans-serif;font-size:14px;color:#000;padding:10px;}
+p.agree {width:50%;border:3px solid #b6d7a8;font-family: 'Raleway', sans-serif;font-size:14px;color:#274e13;background-color:#f5fffa;padding:5px;}
 aside {background:#fff;}
 p.black {font-family: 'Raleway', sans-serif;font-size:18px;color:#000;padding:10px;}
 a.black {font-family: 'Raleway', sans-serif;font-size:18px;color:#cc007d;font-weight:bold;}
 a.black:hover {font-family: 'Raleway', sans-serif;font-size:18px;color:#ff02a0;font-weight:bold;text-decoration:underline;}	
+p.aside {width:250px;font-family: 'Raleway', sans-serif;font-size:14px;color:#000;padding:5px;background-color:honeydew;border:3px solid #A8E6CE;}
+p.home {font-family: 'Raleway', sans-serif;font-size:14px;color:#000;padding:5px;background-color:honeydew;border:3px solid #A8E6CE;}
 	img.gal {padding:5px;}
+	
+	
 
 	a.reg {font-family: 'Raleway', sans-serif;font-size:14px;color:#02ccf9;font-weight:bold;}
-	a.reg:hover {font-family: 'Raleway', sans-serif;font-size:14px;color:#fff;font-weight:bold;text-decoration:underline;}
+	a.reg:hover {font-family: 'Raleway', sans-serif;font-size:14px;color:#000;font-weight:bold;text-decoration:underline;}
 	
 	img.gal {padding:5px;}
 	
 	img:hover {opacity:85%}
+	
+	input[type="checkbox"] {
+  height: 16px;
+
+}
+	
