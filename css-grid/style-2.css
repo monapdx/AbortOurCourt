@@ -14,12 +14,12 @@
 font-family: 'Raleway', sans-serif;font-size:14px;color:#fff;padding:10px;
   line-height: 1.5;
   padding: 20px;
-  background-color:#ff02a0;
+  background-color:#ff33b0;
 
 
   	 
 }
-
+.container:hover > * {}
 .container get {background:none;}
 
 /* nav styles */
