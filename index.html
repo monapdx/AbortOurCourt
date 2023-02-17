@@ -11,7 +11,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
+* {
+	 box-sizing: border-box;
+}
+ body {
+	
+	 padding-top: 60px;
+}
+ .audio-player {
+	 width: 470px;
+	 padding: 35px 20px;
+	 margin: auto;
+	 background-color: white;
+	 border: 1px solid black;
+}
+ .audio-player .player-controls {
+	 position: relative;
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+}
+ .audio-player #radioIcon {
+	 width: 30px;
+	 height: 30px;
+	 background: url("https://img.icons8.com/ios/50/000000/microphone.png") no-repeat center;
+	 background-size: contain;
+}
+ .audio-player #playAudio {
+	 -webkit-appearance: none;
+	 outline: none;
+	 cursor: pointer;
+	 border: none;
+	 width: 30px;
+	 height: 30px;
+	 background: url("https://img.icons8.com/play") no-repeat center;
+	 background-size: contain;
+}
+ .audio-player #playAudio.pause {
+	 background: url("https://img.icons8.com/pause") no-repeat center;
+	 background-size: contain;
+}
+ .audio-player p {
+	 margin: 0 0 0 5px;
+	 line-height: 1;
+	 display: inline-flex;
+}
+ .audio-player p small {
+	 font-size: 10px;
+}
+ .audio-player #seekObjContainer {
+	 position: relative;
+	 width: 300px;
+	 margin: 0 5px;
+	 height: 5px;
+}
+ .audio-player #seekObjContainer #seekObj {
+	 position: relative;
+	 width: 100%;
+	 height: 100%;
+	 background-color: #e3e3e3;
+	 border: 1px solid black;
+}
+ .audio-player #seekObjContainer #seekObj #percentage {
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 height: 100%;
+	 background-color: coral;
+}
 </style>
 
 <meta name="viewport" content="width=470, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
@@ -59,7 +126,31 @@ mootrack('init', '2445dd76-039a-4ab5-9cea-66ed88b35439');
 
 
   <section role="main">
- <div class="container">
+ <div class="container"><div class="audio-player">
+
+  <audio id="audio">
+    <source src="https://gdurl.com/2ov3" type="audio/mp3">
+  </audio>
+
+  <div class="player-controls">
+
+    <div id="radioIcon"></div>
+
+    <button id="playAudio"></button>
+
+    <div id="seekObjContainer">
+      <div id="seekObj">
+        <div id="percentage"></div>
+      </div>
+    </div>
+
+    <p><small id="currentTime">00:00</small></p>
+
+  </div>
+</div>
+<!-- partial -->
+  <script  src="https://abortourcourt.com/audio.js"></script>
+
 
 
 
