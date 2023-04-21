@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - HTML Tags Memory Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="style.css">
 
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header>
+  <h1>Synonymous</h1>
+  <p>Enter as many synonyms as you can for each word! <span id="remain" role="status" aria-live="polite">25</span> synonyms&hellip;</p>
+</header>
+<main>
+  <noscript>You need to enable JavaScript to make guesses.</noscript>
+  <form id="form">
+    <label for="guess"><b>Beautiful</b></label>
+    <input id="guess" type="text" placeholder="synonym" autofocus autocomplete="off" autocapitalize="none" title="Enter a valid tag">
+    <button id="button" type="submit" aria-controls="remain guessed">Guess</button>
+  </form>
+  <ol id="guessed" role="status" aria-live="polite" aria-atomic="false"></ol>
+</main>
+<footer>
+<a href="#" target="_top">Next Word</a></small></p>
+</footer>
+<!-- partial -->
+  <script  src="script.js"></script>
+
+</body>
+</html>
