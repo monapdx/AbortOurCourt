@@ -136,9 +136,15 @@ li {
 	padding: 5px 0;
 }
 
+#footer {background:#000;
+text-align:center;}
 .profile {
+	background:#000;
 	text-align: center;
 }
+
+.static {background:#000;
+text-align:center;}
 
 .profile h2 {
 	font-size: 2em;
