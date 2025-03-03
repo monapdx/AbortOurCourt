@@ -9,8 +9,8 @@
 }
 
 ::selection {
-	background: #333;
-	color: #eee;
+	background: #000;
+	color: #fff;
 }
 
 body {
@@ -20,16 +20,36 @@ body {
 	position: relative;
 	line-height: 1.5em;
 	font-size: 15px;
-	background: repeating-linear-gradient(
-		45deg,
-		#EDA7C4,
-		#EDA7C4 2px,
-		#FFE4F7 2px,
-		#FFE4F7 6px
-	);
-	background-attachment: fixed;
+	background: #000;
+	
 }
-
+.scratchpad{
+  width: 540px;
+  height: 349px;
+  border: solid 10px transparent;
+  margin:0 auto;
+}
+.scratch-container {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width:100%;
+}
+.overlay{
+  text-align: center;
+  position: absolute;
+  z-index: 1000;
+  margin-left:auto;
+  pointer-events:none;          filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='your_transparent.png', sizingMethod='scale');
+ background: none !important;
+}
+.overlay img{
+  width: 540px;
+  height: 349px;
+}
 .dashboard {
 	display: grid;
 	grid-template-columns: repeat(6, 15.25%);
@@ -39,14 +59,14 @@ body {
 	border: 2px solid;
 	width: 1000px;
 	max-width: calc(100% - 40px);
-	background: #FE28A2;
+	background: #fc03c6;
 	box-shadow: 1px 1px, 2px 2px, 3px 3px, 4px 4px;
 }
 
 .dashboard > div {
 	margin-bottom: 20px;
 	padding: 15px;
-	background-color: #f7f7f7;
+	background-color: #FFF;
 	border: 2px solid;
 	grid-column: 1 / 7;
 	box-shadow: inherit;
@@ -191,7 +211,27 @@ text-align:center;}
 		border-bottom: none;
 	}
 }
+  /* Style for checkbox options */
+  .checkbox-option {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 10px; /* Adjust gap between checkboxes */
+  }
 
+  /* Optional: Adjust checkbox label styles */
+  .checkbox-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+	    font-family: "Oswald", serif;font-weight:bold;font-size:16px;
+  }
+
+  .checkbox-img {
+    max-width: 100px; /* Adjust image size as needed */
+    max-height: 100px; /* Adjust image size as needed */
+    margin-bottom: 5px; /* Adjust spacing between image and label */
+  }
 /*Close Button Rules*/
 
 .dashboard .profile button {
@@ -298,7 +338,36 @@ label {
   font-size: 14px;
   color: #555;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Adjust gap between grid items */
+}
 
+.radio-option {
+  display: flex;
+  align-items: center;
+}
+
+.radio-label {
+  margin-left: 10px; /* Adjust spacing between image and text */
+    font-family: "Oswald", serif;font-weight:bold;font-size:16px;
+}
+
+.radio-img {
+  max-width: 100px; /* Adjust image size as needed */
+  max-height: 100px; /* Adjust image size as needed */
+  margin-right: 10px; /* Adjust spacing between images */
+}
+
+input[type="radio"] {
+   /* Hide default radio buttons */
+}
+
+input[type="radio"]:checked + label {
+  font-weight: bold; /* Example style for checked option */
+  	color:#ff0088 ;
+}
 input {
   width: 100%;
   padding: 10px;
@@ -431,64 +500,3 @@ canvas {
             font-size: 1.2em;
         }
 		
-		.audio-player {
-	 width: 270px;
-	 padding: 35px 20px;
-	 margin: auto;
-	 background-color: white;
-	 border: 1px solid black;
-}
- .audio-player .player-controls {
-	 position: relative;
-	 display: flex;
-	 justify-content: space-between;
-	 align-items: center;
-}
- .audio-player #radioIcon {
-	 width: 30px;
-	 height: 30px;
-	 background: url("https://img.icons8.com/ios/50/000000/microphone.png") no-repeat center;
-	 background-size: contain;
-}
- .audio-player #playAudio {
-	 -webkit-appearance: none;
-	 outline: none;
-	 cursor: pointer;
-	 border: none;
-	 width: 30px;
-	 height: 30px;
-	 background: url("https://img.icons8.com/play") no-repeat center;
-	 background-size: contain;
-}
- .audio-player #playAudio.pause {
-	 background: url("https://img.icons8.com/pause") no-repeat center;
-	 background-size: contain;
-}
- .audio-player p {
-	 margin: 0 0 0 5px;
-	 line-height: 1;
-	 display: inline-flex;
-}
- .audio-player p small {
-	 font-size: 10px;
-}
- .audio-player #seekObjContainer {
-	 position: relative;
-	 width: 300px;
-	 margin: 0 5px;
-	 height: 5px;
-}
- .audio-player #seekObjContainer #seekObj {
-	 position: relative;
-	 width: 100%;
-	 height: 100%;
-	 background-color: #e3e3e3;
-	 border: 1px solid black;
-}
- .audio-player #seekObjContainer #seekObj #percentage {
-	 position: absolute;
-	 left: 0;
-	 top: 0;
-	 height: 100%;
-	 background-color: coral;
-}
