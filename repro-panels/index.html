@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <title>Reproductive Rights News</title>
   <link rel="stylesheet" href="style.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Gochi+Hand&display=swap');
+</style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -28,7 +33,7 @@
 	<div class="exercise-table">
 		<h2>Google News</h2>
 		<div class="table-wrap">
-			<h1></h1>
+
     <rssapp-list id="useaDjwhvlAGNDPs"></rssapp-list><script src="https://widget.rss.app/v1/list.js" type="text/javascript" async></script>
 		</div>
 	</div>
@@ -58,23 +63,97 @@
 	</div>
 
 	<div class="challenges">
-		<h2>Abortion Pills</h2>
-		<ol>
-<li><p class="resource"><b><a href="https://www.ineedana.com/">INeedAnA</a> </b>is a resource designed to help individuals in the U.S. <b>access abortion services</b>, offering information about clinics, <b>abortion pills by mail</b>, and state laws. The site prioritizes user privacy, with <b><i><u>no data storage or tracking</u></i></b>. </p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/INeedAnA.png" width="240">
-<li><p><b><a href="https://www.abortionfinder.org/">Abortion Finder</a></b> helps individuals <b>locate abortion providers in the U.S.</b>, offering an easy-to-use clinic locator based on location. The site includes information on different types of abortion procedures, <b>financial assistance</b>, and support for those seeking care.</p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Abortion-Finder.png" width="240">
-<li><p><b><a href="https://aidaccess.org/">Aid Access</a></b> offers online <b>access to abortion pills</b> and miscarriage treatment, providing confidential services for individuals in all 50 U.S. states. The site allows users to <b>order pills for $150 or less</b>, with prescriptions issued by U.S. abortion providers. </p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Aid-Access.png" width="240">
-<li><p><b><a href="https://www.plancpills.org/">Plan C Pills</a></b> offers resources on how to access and use <b>abortion pills</b> safely and effectively. The site includes detailed instructions on how to take the pills, along with helpful tools like a multilingual chatbot called Ally for guidance. It also offers a step-by-step guide and resources in multiple languages. </p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Plan-C-Pills.png" width="240">
-<li><p><b><a href="https://justthepill.com/">Just The Pill</a></b> offers confidential and private abortion services, providing <b>medication abortion by mail</b> or through mobile clinics. Users can access telemedicine consultations with licensed clinicians, with medications like abortion pills delivered directly to their homes.</p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Just-The-Pill.png" width="240">
-<li><p><b><a href="https://www.heyjane.com/how-it-works">Hey Jane</a></b> offers online abortion care with a focus on providing the <b>abortion pill</b> to individuals up to 10 weeks pregnant. This process is supported through virtual consultations with medical professionals, who guide patients through the steps of the medication, offer ongoing support, and ensure safe use of the medications. </p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Hey-Jane.png" width="240">
-<li><p><b><a href="https://www.womenonweb.org/en/i-need-an-abortion">Women on Web</a></b> is an organization that provides access to safe <b>abortion pills</b> by mail for people worldwide. It offers resources about abortion pills, including how to use them, their safety, and potential side effects. </p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Women-on-Web.png" width="240">
-<li><b><a href="https://www.all-options.org/">All Options</a></b> is a nonprofit organization dedicated to providing <b>unconditional, judgment-free support</b> for individuals navigating experiences related to pregnancy, parenting, abortion, and adoption. The Talkline operates Monday through Friday from 10-1am, and Saturday through Sunday from 10-6pm EST. The number is <b>1-888-493-0092</b>.</li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Front-Page-All-Options-01-01-2025_12_36_PM.png" width="240">
-<li><b><a href="https://www.elevatedaccess.org/">Elevated Access</a></b> is a non-profit organization that provides <b>free transportation</b> to individuals seeking essential healthcare services, particularly abortion and gender-affirming care. Through a network of vetted volunteer pilots, they offer private flights to help clients access necessary medical treatments across the United States. </li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Elevated-Access-01-02-2025_07_52_AM.png" width="240">
+		<h2>Voice Notes</h2>
+		   <style>
+    button {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    audio {
+      margin-top: 20px;
+      display: block;
+      width:250px;
+    }
+    #downloadButton {
+      display: none;
+      background-color: #008CBA;
+    }
+    
+    #startButton {width:200px;float:left;padding:3px;height:auto;font-family: "Lobster", serif;}
+    #stopButton {width:200px;float:left;padding:3px;height:auto;font-family: "Lobster", serif;}
+    #generateTable {width:150px;float:left;padding:3px;height:auto;font-family: "Lobster", serif;}
+  </style>
+  
+  
+  <button id="startButton">Start Recording</button>
+  <button id="stopButton" disabled>Stop Recording</button>
+  <br>
+ <center> <audio id="audioPlayback" controls></audio>
+  <br>
+  <a id="downloadButton" download="voice-memo.webm">Download Recording</a>
 
 
+  <script type="text/javascript">const startButton = document.getElementById("startButton");
+const stopButton = document.getElementById("stopButton");
+const audioPlayback = document.getElementById("audioPlayback");
+const downloadButton = document.getElementById("downloadButton");
 
+let mediaRecorder;
+let audioChunks = [];
 
+// Request microphone access and start recording
+startButton.addEventListener("click", async () => {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRecorder = new MediaRecorder(stream);
+    audioChunks = []; // Reset audio chunks
 
-</ol>
+    mediaRecorder.addEventListener("dataavailable", (event) => {
+      audioChunks.push(event.data);
+    });
+
+    mediaRecorder.addEventListener("stop", () => {
+      const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+      const audioURL = URL.createObjectURL(audioBlob);
+      
+      // Set the audio playback source
+      audioPlayback.src = audioURL;
+      
+      // Enable the download button
+      downloadButton.href = audioURL;
+      downloadButton.style.display = "inline-block";
+    });
+
+    mediaRecorder.start();
+    startButton.disabled = true;
+    stopButton.disabled = false;
+    downloadButton.style.display = "none"; // Hide download button while recording
+  } catch (error) {
+    alert("Could not access your microphone. Please check your permissions.");
+    console.error("Microphone access error:", error);
+  }
+});
+
+// Stop recording
+stopButton.addEventListener("click", () => {
+  mediaRecorder.stop();
+  startButton.disabled = false;
+  stopButton.disabled = true;
+});
+
+</script>
+
+<h2></h2>
 
 	</div>
 
@@ -288,7 +367,7 @@ function showBlock(id) {
 	</div>
 	<div id="footer" class="static">
 	
-		<a href="https://monapdx.github.io/AbortOurCourt/"><img src="neon-green.png" width="145"></a>
+		<a href="https://abortsupremecourt.com"><img src="neon-green.png" width="145"></a>
 	
 
 	</div>
