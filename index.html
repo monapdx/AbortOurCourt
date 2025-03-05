@@ -53,7 +53,68 @@
     <div id="promo" class="scratchpad"></div>
 	<br>
 	<h2></h2>
-	
+	<form>
+  <label>
+    <input type="radio" name="blockSelector" value="block1" onclick="showBlock('block1')"> CLICK HERE IF YOU NEED EMOTIONAL SUPPORT
+  </label><br>
+  <label>
+    <input type="radio" name="blockSelector" value="block2" onclick="showBlock('block2')"> CLICK HERE IF YOU NEED TO ORDER ABORTION PILLS
+  </label>
+</form>
+
+<div id="block1" class="block">
+  <!-- HTML code for block 1 -->
+  <h2>Emotional Support</h2>
+  <p>
+
+
+<ol>
+
+<li><p><b><a href="https://www.all-options.org/">All Options</a></b> is a nonprofit organization dedicated to providing <b>unconditional, judgment-free support</b> for individuals navigating experiences related to pregnancy, parenting, abortion, and adoption. The Talkline operates Monday through Friday from 10-1am, and Saturday through Sunday from 10-6pm EST. The number is <b>1-888-493-0092</b>.</li><img src="Abortion/All-Options.png" width="240"></p>
+    <li><p><a href="https://www.pregnancyoptions.info/">Pregnancy Options</a> provides comprehensive information and resources for individuals facing pregnancy decisions. It covers various options such as parenting, adoption, and abortion, emphasizing unbiased, evidence-based information to support informed choices. The site addresses emotional and practical aspects of each option, offers guidance on accessing services, and includes personal stories to provide perspective. It aims to empower individuals by ensuring they have access to accurate information and support during a critical time.</p></li><img src="Abortion/Pregnancy-Options.png" width="240">
+    <li><p><a href="https://www.2plusabortions.com/">2+ Abortions Worldwide</a> is a platform that shares personal stories of individuals who have had two or more abortions, aiming to reduce stigma surrounding abortion. It provides a supportive space for people to tell their stories, share resources, and educate others about abortion experiences. The website also includes information on second-trimester abortions, stories from people of faith, and resources for emotional support. Its mission is to normalize the conversation around abortion and empower individuals.</p></li><img src="Abortion/2-Abortions-Worldwide.png" width="240">
+    <li><p><a href="https://exhaleprovoice.org/">Exhale Pro-Voice</a> serves as a supportive space for individuals who have experienced abortion. It offers resources, including a confidential talkline, for emotional support and connects people with personal stories to foster empathy and understanding. The site promotes healing and resilience by providing a platform where individuals can share their experiences and find community without judgment, aiming to reduce stigma and create a more compassionate dialogue around reproductive choices.
+</p></li><img src="Abortion/Exhale-Pro-Voice.png" width="240">
+    <li><p><a href="https://mahotline.org/">M + A Hotline</a> provides information and resources related to medication abortion (MA). It offers guidance on accessing medication abortion safely and legally, including information about the process, eligibility criteria, and potential side effects. The site aims to empower individuals with accurate information and support to make informed decisions about their reproductive health. Additionally, it provides resources for healthcare providers and advocates, contributing to broader education and advocacy efforts surrounding medication abortion access.</p></li><img src="Abortion/MA-Hotline.png" width="240">
+    <li><p><a href="https://reprocare.com/">ReproCare</a> offers comprehensive information and services related to reproductive health care. It provides resources and support for individuals seeking abortion care, contraception, and other reproductive health services. The site emphasizes patient-centered care, privacy, and accessibility, aiming to empower individuals to make informed decisions about their reproductive health. ReproCare also provides information on clinics, services available, and guidance on accessing care, promoting reproductive rights and health equity.</p></li><img src="Abortion/Repro-Care.png" width="240">
+
+</ol>
+</p>
+</div>
+
+<div id="block2" class="block">
+  <!-- HTML code for block 2 -->
+  <h2>Abortion Pills</h2>
+  <p>
+
+
+<ol>
+
+<li><p><b><a href="https://aidaccess.org/">Aid Access</a></b> offers online <b>access to abortion pills</b> and miscarriage treatment, providing confidential services for individuals in all 50 U.S. states. The site allows users to <b>order pills for $150 or less</b>, with prescriptions issued by U.S. abortion providers. </p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Aid-Access.png" width="240">
+<li><p><b><a href="https://www.plancpills.org/">Plan C Pills</a></b> offers resources on how to access and use <b>abortion pills</b> safely and effectively. The site includes detailed instructions on how to take the pills, along with helpful tools like a multilingual chatbot called Ally for guidance. It also offers a step-by-step guide and resources in multiple languages. </p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Plan-C-Pills.png" width="240">
+<li><p><b><a href="https://justthepill.com/">Just The Pill</a></b> offers confidential and private abortion services, providing <b>medication abortion by mail</b> or through mobile clinics. Users can access telemedicine consultations with licensed clinicians, with medications like abortion pills delivered directly to their homes.</p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Just-The-Pill.png" width="240">
+<li><p><b><a href="https://www.heyjane.com/how-it-works">Hey Jane</a></b> offers online abortion care with a focus on providing the <b>abortion pill</b> to individuals up to 10 weeks pregnant. This process is supported through virtual consultations with medical professionals, who guide patients through the steps of the medication, offer ongoing support, and ensure safe use of the medications. </p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Hey-Jane.png" width="240">
+<li><p><b><a href="https://www.womenonweb.org/en/i-need-an-abortion">Women on Web</a></b> is an organization that provides access to safe <b>abortion pills</b> by mail for people worldwide. It offers resources about abortion pills, including how to use them, their safety, and potential side effects. </p></li><img src="https://raw.githubusercontent.com/ashloren/AbortOurCourt/refs/heads/main/website-thumbnails/Women-on-Web.png" width="240">
+
+</ol>
+</p>
+</div>
+
+<script>
+function showBlock(id) {
+  // Hide all blocks
+  var blocks = document.getElementsByClassName('block');
+  for (var i = 0; i < blocks.length; i++) {
+    blocks[i].style.display = 'none';
+  }
+  
+  // Display the selected block
+  var selectedBlock = document.getElementById(id);
+  if (selectedBlock) {
+    selectedBlock.style.display = 'block';
+  }
+}
+</script>
 	
 	
   </div>
