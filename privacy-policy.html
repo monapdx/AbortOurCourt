@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abort the Supreme Court – Privacy Policy</title>
+
+  <style>
+    /* ===== Base / Reset ===== */
+    :root {
+      --brand:#ed0d92;
+      --bg:#0b0f39;
+      --bg-elev:#11122a;
+      --text:#e9e9ef;
+      --muted:#b9b9c7;
+      --link:var(--brand);
+      --ring:hsl(280 100% 70% / .6);
+
+      --container: 1120px;
+      --space-1: .5rem;
+      --space-2: 1rem;
+      --space-3: 1.5rem;
+      --space-4: 2rem;
+      --radius: 14px;
+    }
+
+    *,
+    *::before,
+    *::after { box-sizing:border-box; }
+
+    html, body {
+      margin:0;
+      padding:0;
+      width:100%;
+      overflow-x:hidden;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    img, picture, video {
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+
+    /* Fluid Type */
+    :root {
+      --step--1: clamp(.88rem, .86rem + .2vw, .98rem);
+      --step-0:  clamp(1rem,  .95rem + .5vw, 1.125rem);
+      --step-1:  clamp(1.25rem, 1.1rem + .9vw, 1.5rem);
+      --step-2:  clamp(1.5rem,  1.3rem + 1.4vw, 2rem);
+      --step-3:  clamp(1.9rem,  1.6rem + 2vw,  2.6rem);
+      --step-4:  clamp(2.4rem,  2rem + 2.8vw, 3.4rem);
+    }
+
+    body {
+      font: 400 var(--step-0)/1.6 system-ui, -apple-system, Segoe UI, Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    h1,h2,h3 {
+      line-height:1.15;
+      margin:0 0 var(--space-2);
+      color:var(--text);
+    }
+    h1 { font-size:var(--step-4); }
+    h2 { font-size:var(--step-2); margin-top:var(--space-4); }
+    h3 { font-size:var(--step-1); margin-top:var(--space-3); }
+
+    p {
+      margin:0 0 var(--space-2);
+      color:var(--muted);
+    }
+
+    ul, ol {
+      margin:0 0 var(--space-2);
+      padding-left:1.5rem;
+      color:var(--muted);
+    }
+
+    /* Links / buttons */
+    a {
+      color:var(--link);
+      text-decoration:none;
+    }
+
+    a:hover {
+      text-decoration:underline;
+    }
+
+    .button {
+      display:inline-flex;
+      align-items:center;
+      gap:.6rem;
+      padding:.7rem 1.1rem;
+      border-radius:var(--radius);
+      background:var(--brand);
+      color:#111;
+      font-weight:700;
+      border:0;
+      box-shadow:0 8px 24px rgba(237,13,146,.25);
+      text-decoration:none;
+    }
+
+    .button:is(:hover,:focus-visible) {
+      color:white;
+      text-decoration:none;
+      filter:brightness(1.08);
+    }
+
+    :focus-visible {
+      color:white;
+      outline:3px solid var(--ring);
+      outline-offset:3px;
+    }
+
+    /* Layout helpers */
+    .container {
+      width:min(100% - 2rem, var(--container));
+      margin-inline:auto;
+    }
+
+    .section {
+      padding-block:clamp(2.5rem, 2rem + 3vw, 5rem);
+    }
+
+    /* Nav (sticky) */
+    .site-nav {
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter:saturate(120%) blur(6px);
+      background:linear-gradient(
+        to bottom,
+        rgba(11,15,57,.85),
+        rgba(11,15,57,.55)
+      );
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .site-nav .bar {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:.8rem 0;
+    }
+
+    .site-nav a {
+      color:var(--text);
+      opacity:.85;
+      font-size:var(--step--1);
+    }
+
+    .site-nav a:hover {
+      opacity:1;
+    }
+
+    .nav-links {
+      display:flex;
+      flex-wrap:wrap;
+      gap:var(--space-2);
+      align-items:center;
+    }
+
+    /* Hero banner (same look, full width) */
+    .hero-bg {
+      width:100%;
+      aspect-ratio:16/5;
+      background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1920.webp");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+
+    @media (max-width:1024px) {
+      .hero-bg {
+        background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1024.webp");
+      }
+    }
+
+    @media (max-width:600px) {
+      .hero-bg {
+        background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-600.webp");
+      }
+    }
+
+    /* Content page styles (single full-width column) */
+    .content-wrapper {
+      padding-block:clamp(2.5rem, 2rem + 3vw, 4rem);
+    }
+
+    .content-card {
+      background:var(--bg-elev);
+      border-radius:var(--radius);
+      padding:clamp(1.5rem, 1.2rem + 2vw, 2.5rem);
+      box-shadow:0 8px 24px rgba(0,0,0,.35);
+    }
+
+    .page-meta {
+      font-size:var(--step--1);
+      color:var(--muted);
+      margin-bottom:var(--space-2);
+    }
+
+    .content-card hr {
+      border:0;
+      border-top:1px solid rgba(255,255,255,.08);
+      margin:var(--space-3) 0;
+    }
+
+    /* Footer */
+    .footer {
+      color:var(--muted);
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-block:2rem;
+    }
+
+    .footer-inner {
+      display:flex;
+      flex-wrap:wrap;
+      gap:var(--space-2);
+      align-items:center;
+      justify-content:space-between;
+      font-size:var(--step--1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / nav -->
+  <header class="site-nav">
+    <div class="container bar">
+      <a href="/" class="site-logo">
+        <strong>ABORT THE SUPREME COURT</strong>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html" class="button">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero image (same banner) -->
+  <div class="hero-bg" role="img" aria-label="Abort the Supreme Court logo banner"></div>
+
+  <!-- Main content: single-column, full-width template -->
+  <main>
+    <section class="content-wrapper">
+      <div class="container">
+        <article class="content-card">
+          <header>
+            <p class="page-meta">Last updated: January 1, 2025</p>
+            <h1>Privacy Policy</h1>
+          </header>
+
+          <p>
+            AbortSupremeCourt.com (“we,” “us,” “our”) is committed to protecting your
+            privacy—especially given the sensitivity of the topics addressed on this website.
+            We believe every person has the right to access information about reproductive
+            justice, abortion rights, and related resources without fear of surveillance,
+            tracking, or data collection.
+          </p>
+
+          <h2>1. Information We Do Not Collect</h2>
+          <p>
+            We do not collect, store, or track any personal information from visitors who
+            simply browse this website. This means:
+          </p>
+          <ul>
+            <li>No cookies for tracking or analytics</li>
+            <li>No Google Analytics or Meta / Facebook pixels</li>
+            <li>No advertising trackers or third-party marketing scripts</li>
+            <li>No device or browser fingerprinting</li>
+          </ul>
+          <p>
+            You can read this site and access resources without logging in,
+            creating an account, or revealing who you are.
+          </p>
+
+          <h2>2. Optional Email Sign-Ups</h2>
+          <p>
+            If you choose to sign up to receive launch notifications or future updates,
+            we will collect the email address you voluntarily provide.
+          </p>
+          <p>We will use your email address only to:</p>
+          <ul>
+            <li>Send updates about new site features or content</li>
+            <li>Share important information related to reproductive justice resources</li>
+          </ul>
+          <p>
+            We do <strong>not</strong> sell your email address, and we do <strong>not</strong>
+            share it with third parties for advertising or data-broker purposes. You may
+            unsubscribe at any time, and we will remove your email from our list.
+          </p>
+
+          <h2>3. Email Service Provider</h2>
+          <p>
+            To send email updates, we may use a trusted email service provider
+            (for example, a newsletter or mailing list tool). That provider will process
+            your email address solely for the purpose of delivering messages you opted into.
+          </p>
+          <p>
+            We choose providers that commit to strong privacy standards and do not
+            sell subscriber data.
+          </p>
+
+          <h2>4. External Links</h2>
+          <p>
+            AbortSupremeCourt.com links to other organizations, clinics, legal
+            resources, and informational sites. We do not control and are not
+            responsible for the privacy practices of those websites.
+          </p>
+          <p>
+            When you click an external link, their terms and privacy policies apply.
+            If privacy is a concern, we encourage you to review those policies
+            before sharing any information with them.
+          </p>
+
+          <h2>5. Data Security</h2>
+          <p>
+            Because we intentionally collect as little information as possible,
+            your privacy risk is inherently limited. For any optional email data
+            stored with our mailing provider, we rely on reasonable technical and
+            administrative safeguards intended to protect it against unauthorized
+            access or misuse.
+          </p>
+
+          <h2>6. Children’s Privacy</h2>
+          <p>
+            This website is not directed at children under the age of 13.
+            We do not knowingly collect personal information from children.
+          </p>
+
+          <h2>7. Changes to This Privacy Policy</h2>
+          <p>
+            We may update this Privacy Policy as the site evolves or in response to
+            changes in best practices or applicable law. The “Last updated” date at
+            the top of this page will reflect the most recent revision.
+          </p>
+          <p>
+            If we ever change how we handle email subscription data in a significant way,
+            we will make a reasonable effort to notify subscribers.
+          </p>
+
+          <h2>8. Contact</h2>
+          <p>
+            If you have questions, concerns, or requests related to this Privacy Policy,
+            you can reach us at:
+          </p>
+          <p>
+            <strong>Email:</strong> <a href="mailto:you@example.com">ashlylorenzana@gmail.com</a>
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <small>© 2025 Abort the Supreme Court</small>
+      <small>
+        <a href="/privacy.html">Privacy Policy</a>
+      </small>
+    </div>
+  </footer>
+</body>
+</html>
