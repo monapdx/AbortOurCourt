@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Whack-a-Supreme Court Justice</title>
+  <style>
+    :root {
+      --bg: #e6eaed;
+      --board-bg: #f7f9fb;
+      --hole-rim: #2a2f36;
+      --text: #222;
+    }
+
+    * ,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #ffffff 0, var(--bg) 55%, #c2ccd6 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      font-size: 32px;
+      letter-spacing: 0.04em;
+    }
+
+    /* Board container */
+    .game {
+      position: relative;
+      padding: 40px 50px;
+      border-radius: 30px;
+      background: var(--board-bg);
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+    }
+
+    /* 3x3 grid for holes */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 160px);
+      grid-gap: 55px;
+      justify-content: center;
+    }
+
+    /* --- HOLE (sunken pit with depth) --- */
+    .hole {
+      position: relative;
+      width: 160px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 30% 30%, #333 0, #111 40%, #000 100%);
+      box-shadow:
+        0 14px 18px rgba(0, 0, 0, 0.8) inset,
+        0 10px 18px rgba(0, 0, 0, 0.5);
+    }
+
+    /* subtle rim around the hole */
+    .hole::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 4px solid var(--hole-rim);
+      box-shadow:
+        0 0 8px rgba(0, 0, 0, 0.5) inset,
+        0 4px 8px rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+    }
+
+    /* inner shadow where the mole emerges */
+    .hole::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      width: 80%;
+      height: 40px;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.9), transparent 70%);
+      filter: blur(3px);
+      pointer-events: none;
+    }
+
+    /* --- MOLE (face popping out) --- */
+.mole {
+  position: absolute;
+  left: 50%;
+  bottom: -120px;                 /* start well BELOW the hole */
+  width: 110px;
+  height: 110px;
+  transform: translateX(-50%);    /* only horizontal centering */
+  border-radius: 50%;
+  background: url("brett.png") center/cover no-repeat;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.6);
+  transition:
+    bottom 0.18s cubic-bezier(0.22, 0.61, 0.36, 1),
+    filter 0.18s ease;
+}
+
+/* when active, she rises UP into view from below */
+.hole.active .mole {
+  bottom: -10px;                  /* tweak this to show more/less of her */
+  filter: brightness(1.03);
+}
+
+/* optional tiny bounce on first pop */
+.hole.active .mole {
+  animation: pop 0.16s ease-out;
+}
+
+@keyframes pop {
+  0%   { bottom: -25px; transform: translateX(-50%) scale(0.96); }
+  70%  { bottom: -10px; transform: translateX(-50%) scale(1.02); }
+  100% { bottom: -10px; transform: translateX(-50%) scale(1); }
+}
+
+
+    /* Score display */
+    .scoreboard {
+      margin-top: 24px;
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    /* custom cursor over holes / mole */
+    .hole,
+    .mole {
+      cursor: url("cursor.png") 56 112, pointer; /* 112x112 cursor, hotspot bottom-center */
+    }
+  </style>
+</head>
+<body>
+  <h1>Whack-a-Cunt</h1>
+
+  <div class="game">
+    <div class="grid">
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+    </div>
+  </div>
+
+  <div class="scoreboard">
+    <span id="score">Score: 0</span>
+  </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const grid    = document.querySelector('.grid');
+  const holes   = document.querySelectorAll('.hole');
+  const scoreEl = document.getElementById('score');
+
+  let score       = 0;
+  let activeHole  = null;
+  let upTimeout   = null;   // how long she's visible
+  let cycleTimeout = null;  // delay between appearances
+
+  // difficulty
+  const upTime       = 600;   // ms she stays visible
+  const minDownTime  = 1000;  // min quiet time
+  const maxDownTime  = 3000;  // max quiet time
+
+  function getRandomDownTime() {
+    return Math.floor(Math.random() * (maxDownTime - minDownTime + 1)) + minDownTime;
+  }
+
+  function hideMole() {
+    if (activeHole) {
+      activeHole.classList.remove('active');
+      activeHole = null;
+    }
+  }
+
+  function gameCycle() {
+    // make sure she's hidden
+    hideMole();
+
+    const downTime = getRandomDownTime();
+
+    cycleTimeout = setTimeout(() => {
+      // pick a random hole and show her
+      const index = Math.floor(Math.random() * holes.length);
+      activeHole = holes[index];
+      activeHole.classList.add('active');
+
+      // keep her up briefly, then start next cycle
+      upTimeout = setTimeout(() => {
+        hideMole();
+        gameCycle();
+      }, upTime);
+    }, downTime);
+  }
+
+  // click anywhere in the grid (hole or mole)
+  grid.addEventListener('click', (event) => {
+    const hole = event.target.closest('.hole');
+    if (!hole) return;                       // clicked outside a hole
+    if (!hole.classList.contains('active')) return; // only score if she's up
+
+    // score!
+    score++;
+    scoreEl.textContent = 'Score: ' + score;
+
+    // stop current "up" timer so she doesn't auto-hide weirdly
+    if (upTimeout) {
+      clearTimeout(upTimeout);
+      upTimeout = null;
+    }
+
+    hideMole();   // remove her now
+    gameCycle();  // start a new cycle: quiet time, then next pop-up
+  });
+
+  // start the game loop
+  gameCycle();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<script type="text/javascript">
+let score = 0;
+let activeHole = null;
+
+window.onload = function() {
+    const holes = document.querySelectorAll('.hole');
+
+    function randomHole() {
+        holes.forEach(hole => hole.classList.remove('active'));
+        const index = Math.floor(Math.random() * holes.length);
+        activeHole = holes[index];
+        activeHole.classList.add('active');
+    }
+
+    function startGame() {
+        setInterval(randomHole, 1000);
+    }
+
+    holes.forEach(hole => {
+        hole.addEventListener('click', () => {
+            if (hole === activeHole) {
+                score++;
+                document.getElementById('score').textContent = `Score: ${score}`;
+                activeHole.classList.remove('active');
+                activeHole = null;
+            }
+        });
+    });
+
+    startGame();
+};
+
+
+
+
+</script>
+
+
+<style type="text/css">
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+	cursor: url('https://raw.githubusercontent.com/ashloren/monapdx/main/mallet.png'), auto; /* Add your custom cursor image here */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 224px); /* Adjust the width of the squares here */
+    grid-gap: 40px;
+    justify-content: center;
+}
+
+.hole {
+    width: 191px; /* Adjust the width of the squares here */
+    height: 250px; /* Adjust the height of the squares here */
+    background-image: url('https://raw.githubusercontent.com/ashloren/monapdx/main/mole-hole.png');
+    position: relative;
+	cursor: url('https://raw.githubusercontent.com/ashloren/monapdx/main/mallet.png'), auto; /* Custom cursor for the grid area */
+    overflow: hidden;
+}
+
+.hole.active::before {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+    width: 171px;
+    height: 224px;
+    background-image: url('https://raw.githubusercontent.com/ashloren/monapdx/main/mole-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.scoreboard {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-Mole</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Whack-a-Mole</h1>
+    <div class="game-grid">
+        <div class="hole" id="hole1"></div>
+        <div class="hole" id="hole2"></div>
+        <div class="hole" id="hole3"></div>
+        <div class="hole" id="hole4"></div>
+        <div class="hole" id="hole5"></div>
+        <div class="hole" id="hole6"></div>
+        <div class="hole" id="hole7"></div>
+        <div class="hole" id="hole8"></div>
+        <div class="hole" id="hole9"></div>
+    </div>
+    <div class="scoreboard">
+        <span id="score">Score: 0</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
