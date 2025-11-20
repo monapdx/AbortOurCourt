@@ -51,6 +51,12 @@ p{ margin:0 0 var(--space-2); color:var(--muted); }
 /* Links / buttons */
 a{ color:var(--link); text-decoration: none; }
 a:hover{ text-decoration: underline; }
+.card .button {
+  width: 100%;
+  justify-content: center;
+}
+
+
 .button{
   display:inline-flex; align-items:center; gap:.6rem;
   padding:.7rem 1.1rem; border-radius:var(--radius);
@@ -107,6 +113,94 @@ a:hover{ text-decoration: underline; }
 /* Footer */
 .footer{ color:var(--muted); border-top:1px solid rgba(255,255,255,.08); padding-block:2rem; }
 
+/* Container spacing */
+.email-signup {
+  margin: 1.5rem 0;
+}
+
+/* You can remove this if you already have a button style you like */
+.email-signup__toggle {
+  cursor: pointer;
+}
+
+/* Box that appears when toggled */
+.email-signup__box {
+  margin-top: 0.75rem;
+}
+
+/* Layout for input + button */
+.email-signup__row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+/* Keep these very generic; your global styles can override if needed */
+.email-signup__input {
+  flex: 1;
+}
+
+.email-signup__submit {
+  cursor: pointer;
+}
+
+/* Optional: stack vertically on small screens */
+@media (max-width: 600px) {
+  .email-signup__row {
+    flex-direction: column;
+  }
+
+  .email-signup__submit {
+    width: 100%;
+  }
+}
+.email-signup__input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+
+  /* Base look */
+  background: #ffffff;
+  color: #111827;
+  border: 2px solid #e5e7eb; /* light gray */
+  border-radius: 8px;
+
+  /* Transitions */
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+/* Placeholder color */
+.email-signup__input::placeholder {
+  color: #9ca3af;
+}
+
+/* Hover (optional—feels more responsive) */
+.email-signup__input:hover {
+  border-color: #d1d5db; /* slightly darker gray */
+}
+
+/* Focus state — thick bright pink */
+.email-signup__input:focus {
+  border-color: #ff2fa3; /* bright pink */
+  box-shadow: 0 0 0 3px rgba(255, 47, 163, 0.25);
+  transform: translateY(-1px);
+}
+
+
+.email-signup__submit:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* Active – subtle press */
+.email-signup__submit:active {
+  transform: translateY(0);
+  filter: brightness(0.95);
+}
+
   </style>
 </head>
 <!DOCTYPE html>
@@ -138,7 +232,44 @@ a:hover{ text-decoration: underline; }
       <div class="container center">
         <h1>Abortion Resources</h1>
         <p>Coming soon!</p>
-        <a class="button" href="#work">Get Notified When We Launch!</a>
+        <a id="email-signup-toggle" class="button">Get Notified When We Launch!</a><div
+    id="email-signup-box"
+    class="email-signup__box"
+    hidden
+  >
+    <form
+      action="https://script.google.com/macros/s/AKfycbzriidi5iCWfptfNuQLIALN_O7s98vXR2pWb5-mdQjoJGb7JZC_gKYG9bxo1QATaQM/exec"
+      method="POST"
+      class="email-signup__form"
+    >
+
+
+      <div class="email-signup__row">
+        <input
+          id="email-signup-input"
+          type="email"
+          name="email"
+          autocomplete="email"
+          required
+          class="email-signup__input"
+          placeholder="you@example.com"
+        />
+<button
+  type="button"
+  id="email-signup-toggle"
+  class="email-signup__toggle"
+  style="padding:0; border:none; background:none; cursor:pointer;"
+>
+  <img
+    src="https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/join-waitlist.png"
+    alt="Join the list"
+    style="width:150px; height:auto;"
+  >
+</button>
+
+      </div>
+    </form>
+  </div>
       </div>
     </section>
 
@@ -148,20 +279,40 @@ a:hover{ text-decoration: underline; }
         <div class="grid">
           <article class="card stack">
             <h3>Abortion Pills</h3>
-            <p><img src="https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/designs/repro-justice-2.png" width="360"></p>
-            <a href="#" class="button">View</a>
+            <p><img src="https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/designs/abortion-stories.png" width="360"></p>
+            <center><a href="#" class="button">View</a></center>
           </article>
           <article class="card stack">
             <h3>Birth Control</h3>
             <p><img src="https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/designs/choose-birth-control.png" width="360"></p>
-            <a href="#" class="button">View</a>
+           <center> <a href="#" class="button">View</a></center>
           </article>
           <article class="card stack">
             <h3>Abortion Support</h3>
             <p><img src="https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/designs/self-care.png" width="324"></p>
-            <a href="#" class="button">View</a>
+            <center><a href="#" class="button">View</a></center>
           </article>
         </div>
+      <div class="container">
+        
+        <div class="grid">
+          <article class="card stack">
+            <h3>Legal Help</h3>
+            <p><img src="https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/designs/legal-help.png" width="360"></p>
+            <center><a href="#" class="button">View</a></center>
+          </article>
+          <article class="card stack">
+            <h3>Funding</h3>
+            <p><img src="https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/designs/funding.png" height="419"></p>
+           <center> <a href="#" class="button">View</a></center>
+          </article>
+          <article class="card stack">
+            <h3>Abortion Support</h3>
+            <p><img src="https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/designs/self-care.png" width="324"></p>
+            <center><a href="#" class="button">View</a></center>
+          </article>
+        </div>        
+        
       </div>
     </section>
 
@@ -173,11 +324,7 @@ a:hover{ text-decoration: underline; }
         </div>
         <div class="card stack">
           <h2>Partnerships</h2>
-          <ul class="stack" style="margin:0; padding-left:1.2rem;">
-            <li>Design & branding</li>
-            <li>Front-end prototyping</li>
-            <li>Writing & editing</li>
-          </ul>
+          <p>Interested in a partnership? Email us at abortsupremecourt@gmail.com with inquiries.</p>
         </div>
       </div>
     </section>
@@ -190,7 +337,23 @@ a:hover{ text-decoration: underline; }
     </div>
   </footer>
   
-  <script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='8fdbf60812b076b5b3f4ae5d8107ca4087edb76a84865f04e24777c2a760ed83';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumome.com/');</script>
+<script>
+  (function () {
+    const toggle = document.getElementById("email-signup-toggle");
+    const box = document.getElementById("email-signup-box");
+
+    if (!toggle || !box) return;
+
+    toggle.addEventListener("click", function () {
+      const isHidden = box.hasAttribute("hidden");
+      if (isHidden) {
+        box.removeAttribute("hidden");
+      } else {
+        box.setAttribute("hidden", "");
+      }
+    });
+  })();
+</script>
 </body>
 </html>
 
