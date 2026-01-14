@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abortion by Mail / Telehealth Comparison</title>
+  <style>
+    :root{
+      --bg: #0b0d12;
+      --card: #111521;
+      --text: #e9eefc;
+      --muted: #a9b4d6;
+      --border: rgba(255,255,255,.12);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 14px;
+    }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.35;
+      padding: 24px;
+    }
+    .wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h1{
+      font-size: clamp(18px, 2.2vw, 26px);
+      margin: 0 0 10px;
+      letter-spacing: .2px;
+    }
+    p.sub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .table-card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    /* Desktop/tablet: normal table with horizontal scroll safety */
+    .table-scroll{
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    table{
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      min-width: 900px; /* keeps columns readable; scrolls on smaller screens */
+    }
+    thead th{
+      text-align: left;
+      font-weight: 650;
+      font-size: 13px;
+      color: var(--muted);
+      padding: 14px 14px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.02);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(6px);
+    }
+    tbody td{
+      vertical-align: top;
+      padding: 14px 14px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    tbody tr:last-child td{
+      border-bottom: none;
+    }
+
+    .provider{
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .type{
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .pill{
+      display: inline-block;
+      padding: 2px 8px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-right: 6px;
+      margin-bottom: 6px;
+      white-space: nowrap;
+    }
+
+    /* Mobile: convert rows into stacked cards */
+    @media (max-width: 780px){
+      .table-scroll{ overflow: visible; }
+      table{ min-width: 0; }
+      thead{ display:none; }
+      table, tbody, tr, td{ display:block; width:100%; }
+      tbody tr{
+        border-bottom: 1px solid var(--border);
+        padding: 10px 12px;
+      }
+      tbody tr:last-child{ border-bottom: none; }
+      tbody td{
+        border: none;
+        padding: 10px 0;
+      }
+      tbody td + td{
+        border-top: 1px dashed rgba(255,255,255,.10);
+      }
+      tbody td[data-label]::before{
+        content: attr(data-label);
+        display:block;
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 6px;
+        letter-spacing: .2px;
+        text-transform: uppercase;
+      }
+    }
+
+    /* Optional link styling (only if you add links) */
+    a{ color: #8fb3ff; }
+    a:hover{ opacity: .9; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Medication Abortion / Abortion-by-Mail Comparison</h1>
+    <p class="sub">Clean, responsive table (desktop: normal table; mobile: stacked cards). Edit text as needed.</p>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table aria-label="Abortion by mail providers comparison">
+          <thead>
+            <tr>
+              <th>Provider / Resource</th>
+              <th>Type of service</th>
+              <th>Where it operates</th>
+              <th>Medical consult?</th>
+              <th>Medication delivery?</th>
+              <th>Cost (approx.)</th>
+              <th>Notes / limitations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Provider / Resource">
+                <div class="provider">Hey Jane</div>
+                <div class="type">Telehealth clinic (medication abortion)</div>
+              </td>
+              <td data-label="Type of service">
+                <span class="pill">Telehealth care</span>
+                <span class="pill">Medication abortion</span>
+              </td>
+              <td data-label="Where it operates">
+                U.S. (selected states; availability varies)
+              </td>
+              <td data-label="Medical consult?">Yes (licensed clinician)</td>
+              <td data-label="Medication delivery?">Yes (mailed)</td>
+              <td data-label="Cost (approx.)">
+                Often sliding scale; varies by state/payment method
+              </td>
+              <td data-label="Notes / limitations">
+                State-limited; provides support before/during/after care; eligibility screening required.
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="Provider / Resource">
+                <div class="provider">Women on Web</div>
+                <div class="type">International online abortion service</div>
+              </td>
+              <td data-label="Type of service">
+                <span class="pill">Online service</span>
+                <span class="pill">Self-managed support</span>
+              </td>
+              <td data-label="Where it operates">
+                Worldwide / many countries (local legal context varies)
+              </td>
+              <td data-label="Medical consult?">Yes (questionnaire review)</td>
+              <td data-label="Medication delivery?">Yes (mailed)</td>
+              <td data-label="Cost (approx.)">
+                Varies by country; often designed to be affordable
+              </td>
+              <td data-label="Notes / limitations">
+                Non-profit; often used where local clinic/telehealth access is limited; timelines and shipping vary.
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="Provider / Resource">
+                <div class="provider">Just the Pill</div>
+                <div class="type">Telehealth abortion pill provider</div>
+              </td>
+              <td data-label="Type of service">
+                <span class="pill">Telehealth care</span>
+                <span class="pill">Medication abortion</span>
+              </td>
+              <td data-label="Where it operates">
+                U.S. (regional / state-dependent)
+              </td>
+              <td data-label="Medical consult?">Yes</td>
+              <td data-label="Medication delivery?">Yes (mailed)</td>
+              <td data-label="Cost (approx.)">
+                Varies by state/service; check current pricing
+              </td>
+              <td data-label="Notes / limitations">
+                Availability depends on state laws and program footprint; eligibility screening required.
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="Provider / Resource">
+                <div class="provider">Plan C</div>
+                <div class="type">Information hub (not a clinic)</div>
+              </td>
+              <td data-label="Type of service">
+                <span class="pill">Resource directory</span>
+                <span class="pill">Education</span>
+              </td>
+              <td data-label="Where it operates">
+                U.S. (information tool)
+              </td>
+              <td data-label="Medical consult?">No (doesn’t provide care)</td>
+              <td data-label="Medication delivery?">No (doesn’t ship pills)</td>
+              <td data-label="Cost (approx.)">Free to use</td>
+              <td data-label="Notes / limitations">
+                Aggregates options/resources and updates; you still use an actual provider/pharmacy/clinic separately.
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="Provider / Resource">
+                <div class="provider">Aid Access</div>
+                <div class="type">Telemedicine abortion pill provider</div>
+              </td>
+              <td data-label="Type of service">
+                <span class="pill">Telemedicine</span>
+                <span class="pill">Medication abortion</span>
+              </td>
+              <td data-label="Where it operates">
+                U.S. and international (model varies by location)
+              </td>
+              <td data-label="Medical consult?">Yes (questionnaire review)</td>
+              <td data-label="Medication delivery?">Yes (mailed)</td>
+              <td data-label="Cost (approx.)">
+                Often around ~$150 with sliding scale in some cases
+              </td>
+              <td data-label="Notes / limitations">
+                Availability and shipping can vary; legal context differs by location; eligibility screening required.
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
