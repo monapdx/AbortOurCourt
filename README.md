@@ -102,7 +102,7 @@ Access to reproductive care is often fragmented, confusing, or intentionally obs
 
 **Ways to contribute:**
 
-- Add new resources
+- <a href="https://github.com/monapdx/AbortOurCourt/issues/new?template=add-resource.yml">Add new resources</a>
 - Improve categorization
 - Flag outdated or incorrect information
 - Suggest new categories or features
