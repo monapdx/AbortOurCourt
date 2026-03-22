@@ -1,0 +1,107 @@
+name: ➕ Add New Resource
+description: Submit a resource for inclusion in AbortOurCourt
+title: "[RESOURCE] <name of resource>"
+labels: ["resource submission"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing to AbortOurCourt.
+
+        This project focuses on curating **reputable, useful, and accessible resources** related to reproductive justice.
+
+        Please provide as much detail as possible to help us evaluate and organize your submission.
+
+  - type: input
+    id: name
+    attributes:
+      label: Resource Name
+      description: What is the official name of the resource or organization?
+      placeholder: e.g. National Abortion Federation
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Website / URL
+      description: Link to the official website or primary page
+      placeholder: https://
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Select the primary category this resource belongs to
+      options:
+        - Abortion Access / Providers
+        - Funding / Financial Assistance
+        - Legal Support / Rights
+        - Emotional Support / Counseling
+        - Storytelling / Experience Sharing
+        - Education / Training
+        - Advocacy / Organizing
+        - Stigma / Culture / Awareness
+        - Other (please specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Geographic Coverage
+      description: Where is this resource available?
+      placeholder: e.g. United States, Oregon, Global, Online only
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does this resource do? Who is it for?
+      placeholder: Provide a clear, neutral summary of the resource
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this resource valuable?
+      description: What makes this resource especially useful or trustworthy?
+      placeholder: e.g. Offers funding within 24 hours, widely cited, community-trusted
+
+  - type: checkboxes
+    id: tags
+    attributes:
+      label: Tags / Relevant Topics
+      description: Select all that apply
+      options:
+        - label: Abortion
+        - label: Financial Aid
+        - label: Legal Help
+        - label: Emotional Support
+        - label: Travel Assistance
+        - label: Telehealth
+        - label: Youth
+        - label: LGBTQ+
+        - label: BIPOC-focused
+        - label: Online Resource
+        - label: In-person Services
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Anything else we should know?
+      placeholder: Optional context, warnings, limitations, etc.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have verified that this resource is legitimate and not misleading or harmful
+          required: true
