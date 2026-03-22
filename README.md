@@ -4,6 +4,8 @@
 
 A growing, open resource hub for **reproductive justice**, **abortion access**, and women’s autonomy.
 
+[➕ Submit a Resource](https://github.com/monapdx/AbortOurCourt/issues/new?template=add-resource.yml)
+
 > ⚠️ **Early Development**  
 > This project is in its early stages. Structure, content, and features are actively evolving.
 
