@@ -1,0 +1,114 @@
+name: 🛠️ Toolkit Submission
+description: Suggest a reproductive justice or abortion rights toolkit to add to the Toolkits page
+title: "[Toolkit]: "
+labels: ["toolkit", "content", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping expand the Toolkits page.
+
+        This page is meant for **high-value reproductive justice and abortion rights toolkits**
+        created by trusted organizations or individuals. Please share enough detail for review.
+
+  - type: input
+    id: toolkit_title
+    attributes:
+      label: Toolkit title
+      placeholder: e.g. "Confronting Pregnancy Criminalization"
+    validations:
+      required: true
+
+  - type: input
+    id: organization
+    attributes:
+      label: Organization or author
+      placeholder: e.g. "Pregnancy Justice"
+    validations:
+      required: true
+
+  - type: input
+    id: toolkit_url
+    attributes:
+      label: Direct link to toolkit
+      placeholder: https://...
+      description: Please include the most direct public link available
+    validations:
+      required: true
+
+  - type: dropdown
+    id: primary_category
+    attributes:
+      label: Primary category
+      description: Choose the category that best fits this toolkit
+      options:
+        - Legal information
+        - Pregnancy criminalization
+        - Healthcare related
+        - Medication abortion
+        - Advocacy & activism
+        - Abortion stigma
+        - Social media & disinformation
+        - Abortion storytelling & reframing narratives
+        - Research / policy
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: secondary_category
+    attributes:
+      label: Secondary category (optional)
+      placeholder: Add another category if it fits in more than one area
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Short summary
+      description: What is this toolkit, and what does it help people understand or do?
+      placeholder: 2–5 sentences
+    validations:
+      required: true
+
+  - type: textarea
+    id: audience
+    attributes:
+      label: Intended audience
+      description: Who is this most useful for?
+      placeholder: e.g. advocates, patients, organizers, researchers, educators, attorneys, journalists
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_add
+    attributes:
+      label: Why should this be added?
+      description: Explain why this resource is especially valuable, trustworthy, or uniquely useful
+      placeholder: Tell us what makes this worth including
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: access
+    attributes:
+      label: Accessibility and availability
+      options:
+        - label: The resource is publicly accessible
+        - label: The link works without requiring a private login
+        - label: The resource appears relevant to reproductive justice and/or abortion rights
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes (optional)
+      placeholder: Anything else reviewers should know?
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Final check
+      options:
+        - label: I understand this submission is for a toolkit/resource suggestion, not self-promotion
+          required: true
+        - label: I have checked that this resource is not already on the Toolkits page
+          required: true
