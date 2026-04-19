@@ -1,0 +1,120 @@
+name: 🤝 Partnership Inquiry
+description: Reach out about collaborating, cross-promotion, resource sharing, or other partnership opportunities
+title: "[Partnership]: "
+labels: ["partnership", "inquiry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in partnering with Abort the Supreme Court.
+
+        Use this form for collaboration ideas such as:
+        - cross-promotion
+        - campaign collaboration
+        - resource sharing
+        - featured content or toolkit contributions
+        - organizational partnerships
+        - interviews, media, or event opportunities
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: Your name
+    validations:
+      required: true
+
+  - type: input
+    id: organization
+    attributes:
+      label: Organization / project name
+      placeholder: Name of your organization, campaign, publication, or project
+    validations:
+      required: true
+
+  - type: input
+    id: role
+    attributes:
+      label: Your role
+      placeholder: e.g. Communications Director, Organizer, Founder, Volunteer
+    validations:
+      required: true
+
+  - type: input
+    id: website
+    attributes:
+      label: Website or project link
+      placeholder: https://...
+
+  - type: input
+    id: contact
+    attributes:
+      label: Best contact email
+      placeholder: name@example.com
+    validations:
+      required: true
+
+  - type: dropdown
+    id: partnership_type
+    attributes:
+      label: Type of partnership
+      options:
+        - Cross-promotion
+        - Content collaboration
+        - Toolkit/resource collaboration
+        - Campaign partnership
+        - Event or speaking opportunity
+        - Media / interview request
+        - Research / educational collaboration
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: Partnership overview
+      description: What kind of collaboration are you proposing?
+      placeholder: Give a clear overview of the opportunity
+    validations:
+      required: true
+
+  - type: textarea
+    id: alignment
+    attributes:
+      label: Why this is a good fit
+      description: How does this align with the mission and focus of the site?
+      placeholder: Explain the shared goals, audience, or values
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: What are you looking for specifically?
+      description: Be as concrete as possible
+      placeholder: e.g. shared links, featured toolkit, newsletter mention, co-created content, campaign amplification
+    validations:
+      required: true
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline (optional)
+      placeholder: Include any important dates, launch windows, or deadlines
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional context (optional)
+      placeholder: Anything else you want us to know?
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Final check
+      options:
+        - label: This inquiry is relevant to reproductive justice, abortion rights, feminism, or closely related advocacy work
+          required: true
+        - label: I understand that submitting this form does not guarantee a partnership
+          required: true
