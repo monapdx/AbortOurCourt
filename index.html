@@ -4,203 +4,225 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abort the Supreme Court</title>
+
   <style>
     /* ===== Base / Reset ===== */
-:root{
-  --brand:#ed0d92;
-  --bg:#0b0f39;           /* matches your header’s midnight blue */
-  --bg-elev:#11122a;
-  --text:#e9e9ef;
-  --muted:#b9b9c7;
-  --link:var(--brand);
-  --ring: hsl(280 100% 70% / .6);
+    :root {
+      --brand:#ed0d92;
+      --bg:#0b0f39;
+      --bg-elev:#11122a;
+      --text:#e9e9ef;
+      --muted:#b9b9c7;
+      --link:var(--brand);
+      --ring:hsl(280 100% 70% / .6);
 
-  /* Layout + type scale */
-  --container: 1120px;
-  --space-1: .5rem;  /* 8px rhythm */
-  --space-2: 1rem;
-  --space-3: 1.5rem;
-  --space-4: 2rem;
-  --radius: 14px;
-}
+      --container: 1120px;
+      --space-1: .5rem;
+      --space-2: 1rem;
+      --space-3: 1.5rem;
+      --space-4: 2rem;
+      --radius: 14px;
+    }
 
-*,
-*::before,
-*::after { box-sizing: border-box; }
+    *,
+    *::before,
+    *::after { box-sizing:border-box; }
 
-html, body { margin:0; padding:0; width:100%; overflow-x:hidden; background:var(--bg); color:var(--text); }
-img, picture, video { max-width:100%; height:auto; display:block; }
+    html, body {
+      margin:0;
+      padding:0;
+      width:100%;
+      overflow-x:hidden;
+      background:var(--bg);
+      color:var(--text);
+    }
 
-/* Fluid Type */
-:root{
-  --step--1: clamp(.88rem, .86rem + .2vw, .98rem);
-  --step-0:  clamp(1rem,  .95rem + .5vw, 1.125rem);
-  --step-1:  clamp(1.25rem, 1.1rem + .9vw, 1.5rem);
-  --step-2:  clamp(1.5rem,  1.3rem + 1.4vw, 2rem);
-  --step-3:  clamp(1.9rem,  1.6rem + 2vw,  2.6rem);
-  --step-4:  clamp(2.4rem,  2rem + 2.8vw, 3.4rem);
-}
-body { font: 400 var(--step-0)/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji"; }
+    img, picture, video {
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
 
-h1,h2,h3{ line-height:1.15; margin:0 0 var(--space-2); }
-h1{ font-size:var(--step-4) }
-h2{ font-size:var(--step-3) }
-h3{ font-size:var(--step-2) }
-p{ margin:0 0 var(--space-2); color:var(--muted); }
+    /* Fluid Type */
+    :root {
+      --step--1: clamp(.88rem, .86rem + .2vw, .98rem);
+      --step-0:  clamp(1rem,  .95rem + .5vw, 1.125rem);
+      --step-1:  clamp(1.25rem, 1.1rem + .9vw, 1.5rem);
+      --step-2:  clamp(1.5rem,  1.3rem + 1.4vw, 2rem);
+      --step-3:  clamp(1.9rem,  1.6rem + 2vw,  2.6rem);
+      --step-4:  clamp(2.4rem,  2rem + 2.8vw, 3.4rem);
+    }
 
-/* Links / buttons */
-a{ color:var(--link); text-decoration: none; }
-a:hover{ text-decoration: underline; }
-.card .button {
-  width: 100%;
-  justify-content: center;
-}
+    body {
+      font: 400 var(--step-0)/1.6 system-ui, -apple-system, Segoe UI, Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+    }
 
+    h1,h2,h3 {
+      line-height:1.15;
+      margin:0 0 var(--space-2);
+      color:var(--text);
+    }
+    h1 { font-size:var(--step-4); }
+    h2 { font-size:var(--step-2); margin-top:var(--space-4); }
+    h3 { font-size:var(--step-1); margin-top:var(--space-3); }
 
-.button{
-  display:inline-flex; align-items:center; gap:.6rem;
-  padding:.7rem 1.1rem; border-radius:var(--radius);
-  background:var(--brand); color:#111; font-weight:700; border:0;
-  box-shadow: 0 8px 24px rgba(237,13,146,.25);
-}
-.button:is(:hover,:focus-visible){ color:white;text-decoration:none;filter:brightness(1.08); }
-:focus-visible{ color:white;outline:3px solid var(--ring); outline-offset:3px; }
+    p {
+      margin:0 0 var(--space-2);
+      color:var(--muted);
+    }
 
-/* Containers + layout utilities */
-.container{ width:min(100% - 2rem, var(--container)); margin-inline:auto; }
-.section{ padding-block: clamp(2.5rem, 2rem + 3vw, 5rem); }
-.stack > * + *{ margin-top: var(--space-3); }
-.cluster{ display:flex; flex-wrap:wrap; gap:var(--space-2); align-items:center; }
-.center{ text-align:center; }
+    ul, ol {
+      margin:0 0 var(--space-2);
+      padding-left:1.5rem;
+      color:var(--muted);
+    }
 
-/* Cards / surfaces */
-.card{
-  background: var(--bg-elev);
-  border-radius: var(--radius);
-  padding: var(--space-3);
-  box-shadow: 0 8px 24px rgba(0,0,0,.35);
-}
+    /* Links / buttons */
+    a {
+      color:var(--link);
+      text-decoration:none;
+    }
 
-/* Grid that auto-fits */
-.grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-3);
-}
+    a:hover {
+      text-decoration:underline;
+    }
 
-/* Nav (sticky, simple) */
-.site-nav{
-  position: sticky; top:0; z-index:10;
-  backdrop-filter: saturate(120%) blur(6px);
-  background: linear-gradient(to bottom, rgba(11,15,57,.85), rgba(11,15,57,.55));
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-.site-nav .bar{ display:flex; align-items:center; justify-content:space-between; padding:.8rem 0; }
-.site-nav a{ color:var(--text); opacity:.85; }
-.site-nav a:hover{ opacity:1; }
+    .button {
+      display:inline-flex;
+      align-items:center;
+      gap:.6rem;
+      padding:.7rem 1.1rem;
+      border-radius:var(--radius);
+      background:var(--brand);
+      color:#111;
+      font-weight:700;
+      border:0;
+      box-shadow:0 8px 24px rgba(237,13,146,.25);
+      text-decoration:none;
+    }
 
-/* Hero (you already have the <picture> version).
-   Here is a "background-image" variant that cannot overflow. */
-.hero-bg{
-  width:100%;
-  aspect-ratio: 16/5;
-  background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1920.webp");
-  background-size:cover; background-position:center; background-repeat:no-repeat;
-}
-@media (max-width:1024px){ .hero-bg{ background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1024.webp"); } }
-@media (max-width:600px){ .hero-bg{ background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-600.webp"); } }
+    .button:is(:hover,:focus-visible) {
+      color:white;
+      text-decoration:none;
+      filter:brightness(1.08);
+    }
 
-/* Footer */
-.footer{ color:var(--muted); border-top:1px solid rgba(255,255,255,.08); padding-block:2rem; }
+    :focus-visible {
+      color:white;
+      outline:3px solid var(--ring);
+      outline-offset:3px;
+    }
 
-/* Container spacing */
-.email-signup {
-  margin: 1.5rem 0;
-}
+    /* Layout helpers */
+    .container {
+      width:min(100% - 2rem, var(--container));
+      margin-inline:auto;
+    }
 
-/* You can remove this if you already have a button style you like */
-.email-signup__toggle {
-  cursor: pointer;
-}
+    .section {
+      padding-block:clamp(2.5rem, 2rem + 3vw, 5rem);
+    }
 
-/* Box that appears when toggled */
-.email-signup__box {
-  margin-top: 0.75rem;
-}
+    /* Nav (sticky) */
+    .site-nav {
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter:saturate(120%) blur(6px);
+      background:linear-gradient(
+        to bottom,
+        rgba(11,15,57,.85),
+        rgba(11,15,57,.55)
+      );
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
 
-/* Layout for input + button */
-.email-signup__row {
-  display: flex;
-  gap: 0.5rem;
-  align-items: stretch;
-}
+    .site-nav .bar {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:.8rem 0;
+    }
 
-/* Keep these very generic; your global styles can override if needed */
-.email-signup__input {
-  flex: 1;
-}
+    .site-nav a {
+      color:var(--text);
+      opacity:.85;
+      font-size:var(--step--1);
+    }
 
-.email-signup__submit {
-  cursor: pointer;
-}
+    .site-nav a:hover {
+      opacity:1;
+    }
 
-/* Optional: stack vertically on small screens */
-@media (max-width: 600px) {
-  .email-signup__row {
-    flex-direction: column;
-  }
+    .nav-links {
+      display:flex;
+      flex-wrap:wrap;
+      gap:var(--space-2);
+      align-items:center;
+    }
 
-  .email-signup__submit {
-    width: 100%;
-  }
-}
-.email-signup__input {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
+    /* Hero banner (same look, full width) */
+    .hero-bg {
+      width:100%;
+      aspect-ratio:16/5;
+      background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1920.webp");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
 
-  /* Base look */
-  background: #ffffff;
-  color: #111827;
-  border: 2px solid #e5e7eb; /* light gray */
-  border-radius: 8px;
+    @media (max-width:1024px) {
+      .hero-bg {
+        background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1024.webp");
+      }
+    }
 
-  /* Transitions */
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.15s ease;
-}
+    @media (max-width:600px) {
+      .hero-bg {
+        background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-600.webp");
+      }
+    }
 
-/* Placeholder color */
-.email-signup__input::placeholder {
-  color: #9ca3af;
-}
+    /* Content page styles (single full-width column) */
+    .content-wrapper {
+      padding-block:clamp(2.5rem, 2rem + 3vw, 4rem);
+    }
 
-/* Hover (optional—feels more responsive) */
-.email-signup__input:hover {
-  border-color: #d1d5db; /* slightly darker gray */
-}
+    .content-card {
+      background:var(--bg-elev);
+      border-radius:var(--radius);
+      padding:clamp(1.5rem, 1.2rem + 2vw, 2.5rem);
+      box-shadow:0 8px 24px rgba(0,0,0,.35);
+    }
 
-/* Focus state — thick bright pink */
-.email-signup__input:focus {
-  border-color: #ff2fa3; /* bright pink */
-  box-shadow: 0 0 0 3px rgba(255, 47, 163, 0.25);
-  transform: translateY(-1px);
-}
+    .page-meta {
+      font-size:var(--step--1);
+      color:var(--muted);
+      margin-bottom:var(--space-2);
+    }
 
+    .content-card hr {
+      border:0;
+      border-top:1px solid rgba(255,255,255,.08);
+      margin:var(--space-3) 0;
+    }
 
-.email-signup__submit:hover {
-  filter: brightness(1.05);
-  transform: translateY(-1px);
-}
+    /* Footer */
+    .footer {
+      color:var(--muted);
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-block:2rem;
+    }
 
-/* Active – subtle press */
-.email-signup__submit:active {
-  transform: translateY(0);
-  filter: brightness(0.95);
-}
-
+    .footer-inner {
+      display:flex;
+      flex-wrap:wrap;
+      gap:var(--space-2);
+      align-items:center;
+      justify-content:space-between;
+      font-size:var(--step--1);
+    }
   </style>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -212,96 +234,77 @@ a:hover{ text-decoration: underline; }
 
   gtag('config', 'G-FMHFXBZ696');
 </script>
-
-
 <body>
+  <!-- Header / nav -->
   <header class="site-nav">
     <div class="container bar">
-      <a href="https://abortsupremecourt.com" class="cluster"><strong>ABORT THE SUPREME COURT</strong></a>
-      <nav class="cluster">
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <a href="" class="site-logo">
+        <strong>ABORT THE SUPREME COURT</strong>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="">About</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Choose ONE hero: background-image OR <picture>. -->
+  <!-- Hero image (same banner) -->
   <div class="hero-bg" role="img" aria-label="Abort the Supreme Court logo banner"></div>
 
+  <!-- Main content: single-column, full-width template -->
   <main>
-    <section class="section">
-      <div class="container center">
-        <h1></h1>
-        <p></p>
-        
-
-
-
-
-  </div>
-      </div>
-    </section>
-
-    <section id="work" class="section">
+    <section class="content-wrapper">
       <div class="container">
+        <article class="content-card">
+        <img src="images/photos/sfc-banner.jpg" width="">
+        <h2>Speaking & Participation</h2>
+        <p>I speak about <b>reproductive justice</b> from direct experience across advocacy, peer support, and storytelling spaces. My work includes over <b>280 hours</b> of involvement in organizing, direct support, and narrative-based programs, and is grounded in both lived experience and firsthand exposure to how these systems actually function.</p>
+        <h2>Topics</h2>
+        <p>I’m available to speak on topics including:
+<ul>    
+<li><b>Abortion</b> experiences outside of “acceptable” or crisis-driven narratives
+<li>What people actually need when they reach out to abortion support lines
+<li>The gap between policy, access, and lived experience
+<li>Emotional realities of abortion that are often overlooked or simplified
+<li>Storytelling as a tool in reproductive justice movements
+<li>Supporting people through pregnancy decisions without agenda or judgment</ul></p>
 
-        <div class="grid">
-          <article class="card stack">
-            <h3></h3>
-            <p><img src="images/photos/kotek-warren.png"></p>
-            
-          </article>
-          <article class="card stack">
-            <h3></h3>
-            <p><img src="images/photos/stories-for-choice.jpg" width="580"></p>
-           
-          </article>
-          
-        </div>        
-        
-      </div>
-    </section>
+<h2>Experience</h2>
+<p><ul><li><b>Stories of Choice – TMI Project (New York)</b>
+Participated in a cohort-based storytelling program culminating in a live monologue performance focused on abortion narratives.
+<li><b>Talkline Advocate – All-Options</b>
+Provided peer support through a national Talkline, supporting people navigating pregnancy, abortion, parenting, and loss. Completed 90+ hours of shifts and 25+ hours of training.
+<li><b>Electoral Fellow – Planned Parenthood Advocates of Oregon</b>
+Participated in a paid fellowship focused on organizing, canvassing, and voter outreach, contributing over 100 hours to advocacy efforts.
+<li><b>Clinic Escort – Planned Parenthood Columbia Willamette</b>
+Volunteered as a clinic escort, supporting patient access and safety.</ul></p>
+<h2>Availability</h2>
+<p>I am available for:
+<ul>
+<li>Panels and speaking engagements
+<li>Storytelling events and readings
+<li>Workshops and facilitated discussions
+<li>Podcast interviews
+<li>Advocacy-related collaborations</ul></p>
+<h2>Contact</h2>
+<p>For speaking opportunities or collaboration inquiries, please reach out at:
 
-    <section id="about" class="section">
-      <div class="container grid">
-        <div class="card stack">
-          <h2>Discord Server</h2>
-          <p>Join our <a href="https://discord.gg/MNNqWSnucV">Abortion Support</a> Discord Server!</p><p><a href=""><img src="images/photos/github.png"></a> 
-          <a href=""><img src="images/photos/discord.png"></a></p>
-        </div>
-        <div class="card stack">
-          <h2>Partnerships</h2>
-          <p>Interested in a partnership? Email us at <a href="mailto:abortsupremecourt@gmail.com">abortsupremecourt@gmail.com</a> with inquiries.</p>
-        </div>
+[ashlylorenzana@gmail.com]</p>
+        </article>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container cluster" style="justify-content:space-between;">
+    <div class="container footer-inner">
       <small>© 2025 Abort the Supreme Court</small>
-      <small><a href="privacy-policy.html" aria-label="Privacy policy">Privacy</a></small>
+      <small>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </small>
     </div>
   </footer>
   
-<script>
-  (function () {
-    const toggle = document.getElementById("email-signup-toggle");
-    const box = document.getElementById("email-signup-box");
 
-    if (!toggle || !box) return;
-
-    toggle.addEventListener("click", function () {
-      const isHidden = box.hasAttribute("hidden");
-      if (isHidden) {
-        box.removeAttribute("hidden");
-      } else {
-        box.setAttribute("hidden", "");
-      }
-    });
-  })();
-</script>
 </body>
-</html>
-
 </html>
