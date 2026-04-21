@@ -6,240 +6,386 @@
   <title>Abort the Supreme Court</title>
 
   <style>
-    /* ===== Base / Reset ===== */
     :root {
-      --brand:#ed0d92;
-      --bg:#0b0f39;
-      --bg-elev:#11122a;
-      --text:#e9e9ef;
-      --muted:#b9b9c7;
-      --link:var(--brand);
-      --ring:hsl(280 100% 70% / .6);
+      --brand: #ed0d92;
+      --bg: #e9e4d4;
+      --surface: #f7f4ea;
+      --surface-2: #ffffff;
+      --text: #111111;
+      --muted: #48505c;
+      --yellow: #ffe100;
+      --blue: #53d4ff;
+      --black: #111111;
+      --white: #ffffff;
 
-      --container: 1120px;
+      --container: 980px;
       --space-1: .5rem;
       --space-2: 1rem;
       --space-3: 1.5rem;
       --space-4: 2rem;
-      --radius: 14px;
+      --space-5: 3rem;
+
+      --border: 4px solid #111111;
+      --shadow-sm: 4px 4px 0 #111111;
+      --shadow-md: 6px 6px 0 #111111;
+      --shadow-lg: 8px 8px 0 #111111;
     }
 
     *,
     *::before,
-    *::after { box-sizing:border-box; }
+    *::after {
+      box-sizing: border-box;
+    }
 
     html, body {
-      margin:0;
-      padding:0;
-      width:100%;
-      overflow-x:hidden;
-      background:var(--bg);
-      color:var(--text);
-    }
-
-    img, picture, video {
-      max-width:100%;
-      height:auto;
-      display:block;
-    }
-
-    /* Fluid Type */
-    :root {
-      --step--1: clamp(.88rem, .86rem + .2vw, .98rem);
-      --step-0:  clamp(1rem,  .95rem + .5vw, 1.125rem);
-      --step-1:  clamp(1.25rem, 1.1rem + .9vw, 1.5rem);
-      --step-2:  clamp(1.5rem,  1.3rem + 1.4vw, 2rem);
-      --step-3:  clamp(1.9rem,  1.6rem + 2vw,  2.6rem);
-      --step-4:  clamp(2.4rem,  2rem + 2.8vw, 3.4rem);
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
     }
 
     body {
-      font: 400 var(--step-0)/1.6 system-ui, -apple-system, Segoe UI, Roboto,
-        "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      font: 400 clamp(1rem, .95rem + .5vw, 1.125rem)/1.65 Inter, Arial, Helvetica, sans-serif;
     }
 
-    h1,h2,h3 {
-      line-height:1.15;
-      margin:0 0 var(--space-2);
-      color:var(--text);
+    img, picture, video {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
-    h1 { font-size:var(--step-4); }
-    h2 { font-size:var(--step-2); margin-top:var(--space-4); }
-    h3 { font-size:var(--step-1); margin-top:var(--space-3); }
+
+    h1, h2, h3 {
+      margin: 0 0 var(--space-2);
+      color: var(--text);
+      line-height: 1;
+      font-family: Arial Black, Impact, Inter, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 1.6rem + 3vw, 4.5rem);
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.3rem);
+      margin-top: var(--space-4);
+    }
+
+    h3 {
+      font-size: clamp(1.1rem, 1rem + .8vw, 1.45rem);
+    }
 
     p {
-      margin:0 0 var(--space-2);
-      color:var(--muted);
+      margin: 0 0 var(--space-2);
+      color: var(--muted);
     }
 
-    ul, ol {
-      margin:0 0 var(--space-2);
-      padding-left:1.5rem;
-      color:var(--muted);
+    ul {
+      margin: 0 0 var(--space-2);
+      padding-left: 1.25rem;
+      color: var(--muted);
     }
 
-    /* Links / buttons */
+    li + li {
+      margin-top: .55rem;
+    }
+
     a {
-      color:var(--link);
-      text-decoration:none;
+      color: inherit;
+      text-decoration: none;
     }
 
     a:hover {
-      text-decoration:underline;
-    }
-
-    .button {
-      display:inline-flex;
-      align-items:center;
-      gap:.6rem;
-      padding:.7rem 1.1rem;
-      border-radius:var(--radius);
-      background:var(--brand);
-      color:#111;
-      font-weight:700;
-      border:0;
-      box-shadow:0 8px 24px rgba(237,13,146,.25);
-      text-decoration:none;
-    }
-
-    .button:is(:hover,:focus-visible) {
-      color:white;
-      text-decoration:none;
-      filter:brightness(1.08);
+      text-decoration: none;
     }
 
     :focus-visible {
-      color:white;
-      outline:3px solid var(--ring);
-      outline-offset:3px;
+      outline: 3px solid var(--brand);
+      outline-offset: 3px;
     }
 
-    /* Layout helpers */
     .container {
-      width:min(100% - 2rem, var(--container));
-      margin-inline:auto;
+      width: min(100% - 2rem, var(--container));
+      margin-inline: auto;
     }
 
-    .section {
-      padding-block:clamp(2.5rem, 2rem + 3vw, 5rem);
-    }
-
-    /* Nav (sticky) */
     .site-nav {
-      position:sticky;
-      top:0;
-      z-index:10;
-      backdrop-filter:saturate(120%) blur(6px);
-      background:linear-gradient(
-        to bottom,
-        rgba(11,15,57,.85),
-        rgba(11,15,57,.55)
-      );
-      border-bottom:1px solid rgba(255,255,255,.06);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--white);
+      border-bottom: var(--border);
     }
 
     .site-nav .bar {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:.8rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
     }
 
-    .site-nav a {
-      color:var(--text);
-      opacity:.85;
-      font-size:var(--step--1);
-    }
-
-    .site-nav a:hover {
-      opacity:1;
+    .site-logo {
+      display: inline-flex;
+      align-items: center;
+      min-height: 52px;
+      padding: .75rem 1rem;
+      background: var(--yellow);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      font-family: Arial Black, Impact, sans-serif;
+      font-size: .92rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
     }
 
     .nav-links {
-      display:flex;
-      flex-wrap:wrap;
-      gap:var(--space-2);
-      align-items:center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      align-items: center;
     }
 
-    /* Hero banner (same look, full width) */
+    .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: .7rem 1rem;
+      background: var(--white);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      font-size: .85rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      transition: transform 120ms ease, box-shadow 120ms ease;
+    }
+
+    .nav-links a:hover,
+    .button:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #111111;
+    }
+
+    .nav-links a:active,
+    .button:active {
+      transform: translate(6px, 6px);
+      box-shadow: none;
+    }
+
     .hero-bg {
-      width:100%;
-      aspect-ratio:16/5;
-      background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1920.webp");
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
+      width: 100%;
+      aspect-ratio: 16 / 5;
+      background-image: url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1920.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-bottom: var(--border);
     }
 
     @media (max-width:1024px) {
       .hero-bg {
-        background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1024.webp");
+        background-image: url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1024.webp");
       }
     }
 
     @media (max-width:600px) {
       .hero-bg {
-        background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-600.webp");
+        background-image: url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-600.webp");
       }
     }
 
-    /* Content page styles (single full-width column) */
     .content-wrapper {
-      padding-block:clamp(2.5rem, 2rem + 3vw, 4rem);
+      padding-block: clamp(2rem, 1.5rem + 3vw, 4rem);
+    }
+
+    .intro-card {
+      background: var(--surface);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(1.25rem, 1rem + 2vw, 2.25rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: .5rem .8rem;
+      background: var(--brand);
+      color: var(--white);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      font-size: .76rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    .highlight {
+      display: inline;
+      background: var(--yellow);
+      padding: 0 .12em .04em;
+    }
+
+    .intro-copy {
+      max-width: 60ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 1.25rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: .8rem 1.15rem;
+      background: var(--yellow);
+      color: var(--text);
+      border: var(--border);
+      box-shadow: var(--shadow-md);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      transition: transform 120ms ease, box-shadow 120ms ease;
+    }
+
+    .button-pink {
+      background: var(--brand);
+      color: var(--white);
     }
 
     .content-card {
-      background:var(--bg-elev);
-      border-radius:var(--radius);
-      padding:clamp(1.5rem, 1.2rem + 2vw, 2.5rem);
-      box-shadow:0 8px 24px rgba(0,0,0,.35);
+      background: var(--surface-2);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(1.25rem, 1rem + 2vw, 2.25rem);
     }
 
-    .page-meta {
-      font-size:var(--step--1);
-      color:var(--muted);
-      margin-bottom:var(--space-2);
+    .feature-image {
+      margin: 0 0 1.5rem;
+      border: var(--border);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      background: var(--white);
     }
 
-    .content-card hr {
-      border:0;
-      border-top:1px solid rgba(255,255,255,.08);
-      margin:var(--space-3) 0;
+    .section-label {
+      display: inline-block;
+      margin-bottom: .75rem;
+      padding: .45rem .7rem;
+      background: var(--blue);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      font-size: .74rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .12em;
     }
 
-    /* Footer */
+    .content-block + .content-block {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: var(--border);
+    }
+
+    .contact-box {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: var(--surface);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-box a {
+      font-weight: 900;
+      border-bottom: 3px solid var(--brand);
+    }
+
+    .contact-box a:hover {
+      background: var(--brand);
+      color: var(--white);
+    }
+
     .footer {
-      color:var(--muted);
-      border-top:1px solid rgba(255,255,255,.08);
-      padding-block:2rem;
+      border-top: var(--border);
+      background: var(--white);
+      padding-block: 1.5rem;
     }
 
     .footer-inner {
-      display:flex;
-      flex-wrap:wrap;
-      gap:var(--space-2);
-      align-items:center;
-      justify-content:space-between;
-      font-size:var(--step--1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .92rem;
+    }
+
+    .footer small {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .footer a {
+      font-weight: 900;
+      text-transform: uppercase;
+      border-bottom: 3px solid var(--brand);
+    }
+
+    .footer a:hover {
+      background: var(--brand);
+      color: var(--white);
+    }
+
+    @media (max-width: 700px) {
+      .site-nav .bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .site-logo {
+        justify-content: center;
+      }
+
+      .nav-links {
+        width: 100%;
+      }
+
+      .nav-links a,
+      .button {
+        width: 100%;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMHFXBZ696"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-FMHFXBZ696');
 </script>
+
 <body>
-  <!-- Header / nav -->
   <header class="site-nav">
     <div class="container bar">
       <a href="" class="site-logo">
-        <strong>ABORT THE SUPREME COURT</strong>
+        <strong>Abort the Supreme Court</strong>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="">About</a>
@@ -248,63 +394,119 @@
     </div>
   </header>
 
-  <!-- Hero image (same banner) -->
   <div class="hero-bg" role="img" aria-label="Abort the Supreme Court logo banner"></div>
 
-  <!-- Main content: single-column, full-width template -->
   <main>
     <section class="content-wrapper">
       <div class="container">
-        <article class="content-card"><h3>Available for speaking, storytelling, and collaboration</h3>
-        <img src="images/photos/sfc-banner.jpg" width="">
-        <h2>Speaking & Participation</h2>
-        <p>I speak about <b>reproductive justice</b> from direct experience across advocacy, peer support, and storytelling. My work includes over <b>280 hours of involvement</b> in organizing, direct support, and narrative-based programs.</p>
-        <h2>Topics</h2>
-        <p>I’m available to speak on topics including:
-<ul>    
-<li><b>Abortion</b> experiences outside of “acceptable” or crisis-driven narratives
-<li>What people actually need when they reach out to abortion support lines
-<li>The gap between policy, access, and lived experience
-<li>Emotional realities of abortion that are often overlooked or simplified
-<li>Storytelling as a tool in reproductive justice movements
-<li>Supporting people through pregnancy decisions without agenda or judgment</ul></p>
 
-<h2>Experience</h2>
-<p><ul><li><b>Stories of Choice – TMI Project (New York)</b>
-Participated in a cohort-based storytelling program culminating in a live monologue performance centered on abortion narratives.
-<li><b>Talkline Advocate – All-Options</b>
-Provided peer support through a national Talkline, supporting people navigating pregnancy, abortion, parenting, and loss. Completed 90+ hours of shifts and 25+ hours of training.
-<li><b>Electoral Fellow – Planned Parenthood Advocates of Oregon</b>
-Participated in a paid fellowship focused on organizing, canvassing, and voter outreach, contributing over 100 hours to advocacy efforts.
-<li><b>Clinic Escort – Planned Parenthood Columbia Willamette</b>
-Supported patient access and safety as a clinic escort.</ul></p>
-<h2>Availability</h2>
-<p>I am available for:
-<ul>
-<li>Panels and speaking engagements
-<li>Storytelling events and readings
-<li>Workshops and facilitated discussions
-<li>Podcast interviews
-<li>Advocacy-related collaborations</ul></p>
-<h2>Contact</h2>
-<p>For speaking opportunities or collaboration inquiries, please reach out at:
+        <section class="intro-card">
+          <span class="eyebrow">Speaking · Storytelling · Collaboration</span>
+          <h1>
+            Available for <span class="highlight">speaking</span>,
+            storytelling, and collaboration
+          </h1>
+          <p class="intro-copy">
+            I speak about reproductive justice from direct experience across advocacy,
+            peer support, and storytelling. My work includes more than 280 hours of
+            involvement in organizing, direct support, and narrative-based programs.
+          </p>
 
-[ashlylorenzana@gmail.com]</p>
+          <div class="hero-actions">
+            <a class="button button-pink" href="mailto:ashlylorenzana@gmail.com">Book / Inquire</a>
+            <a class="button" href="#topics">View Topics</a>
+          </div>
+        </section>
+
+        <article class="content-card">
+          <figure class="feature-image">
+            <img src="images/photos/sfc-banner.jpg" alt="Stories for Choice banner" />
+          </figure>
+
+          <section class="content-block" id="speaking">
+            <span class="section-label">Overview</span>
+            <h2>Speaking & Participation</h2>
+            <p>
+              I speak about <b>reproductive justice</b> from direct experience across
+              advocacy, peer support, and storytelling. My work includes over
+              <b>280 hours of involvement</b> in organizing, direct support, and
+              narrative-based programs.
+            </p>
+          </section>
+
+          <section class="content-block" id="topics">
+            <span class="section-label">Topics</span>
+            <h2>What I can speak on</h2>
+            <ul>
+              <li><b>Abortion</b> experiences outside of “acceptable” or crisis-driven narratives</li>
+              <li>What people actually need when they reach out to abortion support lines</li>
+              <li>The gap between policy, access, and lived experience</li>
+              <li>Emotional realities of abortion that are often overlooked or simplified</li>
+              <li>Storytelling as a tool in reproductive justice movements</li>
+              <li>Supporting people through pregnancy decisions without agenda or judgment</li>
+            </ul>
+          </section>
+
+          <section class="content-block" id="experience">
+            <span class="section-label">Experience</span>
+            <h2>Relevant work</h2>
+            <ul>
+              <li>
+                <b>Stories of Choice – TMI Project (New York)</b><br />
+                Participated in a cohort-based storytelling program culminating in a live
+                monologue performance centered on abortion narratives.
+              </li>
+              <li>
+                <b>Talkline Advocate – All-Options</b><br />
+                Provided peer support through a national Talkline, supporting people
+                navigating pregnancy, abortion, parenting, and loss. Completed 90+ hours
+                of shifts and 25+ hours of training.
+              </li>
+              <li>
+                <b>Electoral Fellow – Planned Parenthood Advocates of Oregon</b><br />
+                Participated in a paid fellowship focused on organizing, canvassing, and
+                voter outreach, contributing over 100 hours to advocacy efforts.
+              </li>
+              <li>
+                <b>Clinic Escort – Planned Parenthood Columbia Willamette</b><br />
+                Supported patient access and safety as a clinic escort.
+              </li>
+            </ul>
+          </section>
+
+          <section class="content-block" id="availability">
+            <span class="section-label">Availability</span>
+            <h2>Open to</h2>
+            <ul>
+              <li>Panels and speaking engagements</li>
+              <li>Storytelling events and readings</li>
+              <li>Workshops and facilitated discussions</li>
+              <li>Podcast interviews</li>
+              <li>Advocacy-related collaborations</li>
+            </ul>
+          </section>
+
+          <section class="content-block" id="contact">
+            <span class="section-label">Contact</span>
+            <h2>Reach out</h2>
+            <p>
+              For speaking opportunities or collaboration inquiries, please reach out at:
+            </p>
+
+            <div class="contact-box">
+              <a href="mailto:ashlylorenzana@gmail.com">ashlylorenzana@gmail.com</a>
+            </div>
+          </section>
         </article>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-inner">
       <small>© 2025 Abort the Supreme Court</small>
-      <small>
-        <a href="privacy-policy.html">Privacy Policy</a>
-      </small>
+      <small><a href="privacy-policy.html">Privacy Policy</a></small>
     </div>
   </footer>
-  
-
 </body>
 </html>
