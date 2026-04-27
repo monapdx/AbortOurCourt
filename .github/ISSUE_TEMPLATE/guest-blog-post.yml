@@ -1,0 +1,101 @@
+name: Guest Blog Post Submission
+description: Share an abortion story or narrative that challenges conventional expectations or stereotypes.
+title: "[Guest Post]: "
+labels: ["guest-post", "submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Guest Blog Submission
+
+        Thank you for your interest in contributing to AbortSupremeCourt.
+
+        This space prioritizes abortion narratives that are often excluded, overlooked, or considered "unacceptable" in mainstream discourse. We are especially interested in stories that do **not** center tragedy, regret, or justification.
+
+        You do **not** need to frame your story in a way that makes it palatable to others.
+
+  - type: input
+    id: title
+    attributes:
+      label: Proposed Title
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary / Pitch
+      description: Briefly describe your story and what makes it unconventional or outside dominant narratives.
+      placeholder: |
+        What perspective does your story offer that is rarely seen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: story
+    attributes:
+      label: Full Draft (or Partial)
+      description: Paste your full post here, or a substantial excerpt if it's long.
+      placeholder: |
+        You can write freely. This does not need to follow traditional storytelling expectations.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: themes
+    attributes:
+      label: Themes (select all that apply)
+      options:
+        - label: No regret / neutral experience
+        - label: Multiple abortions
+        - label: Financial or logistical reasoning
+        - label: Not wanting children (childfree by choice)
+        - label: Ambivalence / mixed feelings
+        - label: Positive or empowering experience
+        - label: Other (describe below)
+
+  - type: textarea
+    id: other_theme
+    attributes:
+      label: If "Other," describe your theme
+      required: false
+
+  - type: dropdown
+    id: anonymity
+    attributes:
+      label: Attribution Preference
+      options:
+        - Publish with my name
+        - Publish under a pseudonym
+        - Publish anonymously
+    validations:
+      required: true
+
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Boundaries / Notes for Editors
+      description: |
+        Anything you do NOT want changed, emphasized, or removed?
+        Any context we should be aware of?
+      required: false
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent & Rights
+      options:
+        - label: I confirm this is my story to share
+          required: true
+        - label: I consent to this being published on AbortSupremeCourt
+          required: true
+        - label: I understand minor edits may be made for clarity (unless otherwise noted)
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        We believe abortion stories do not need to be tragic, rare, or morally justified to be valid.
+
+        Thank you for contributing to a broader, more honest narrative.
