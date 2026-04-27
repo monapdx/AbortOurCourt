@@ -8,12 +8,14 @@
 
   <link rel="canonical" href="https://abortsupremecourt.com/posts/the-economics-of-choice.html">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="The Economics of Choice: What It Really Costs to Have a Child You Don’t Want">
   <meta property="og:description" content="The real costs of parenthood include money, time, energy, opportunity, and alignment with the life someone actually wants.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://abortsupremecourt.com/posts/the-economics-of-choice.html">
   <meta property="og:site_name" content="Abort Supreme Court">
 
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,21 +38,323 @@
     }
   }
   </script>
+
+  <style>
+    :root {
+      --brand: #ed0d92;
+      --bg: #e9e4d4;
+      --surface: #f7f4ea;
+      --surface-2: #ffffff;
+      --text: #111111;
+      --muted: #48505c;
+      --yellow: #ffe100;
+      --black: #111111;
+      --white: #ffffff;
+
+      --container: 980px;
+      --space-1: .5rem;
+      --space-2: 1rem;
+      --space-3: 1.5rem;
+      --space-4: 2rem;
+
+      --border: 4px solid #111111;
+      --shadow-sm: 4px 4px 0 #111111;
+      --shadow-md: 6px 6px 0 #111111;
+      --shadow-lg: 8px 8px 0 #111111;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      font: 400 clamp(1rem, .95rem + .5vw, 1.125rem)/1.65 Inter, Arial, Helvetica, sans-serif;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 var(--space-2);
+      color: var(--text);
+      line-height: 1;
+      font-family: Arial Black, Impact, Inter, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 1.3rem + 2.2vw, 3rem);
+      line-height: 1.1;
+    }
+
+    p {
+      margin: 0 0 var(--space-2);
+      color: var(--muted);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--brand);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--container));
+      margin-inline: auto;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--white);
+      border-bottom: var(--border);
+    }
+
+    .site-nav .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .site-logo {
+      display: inline-flex;
+      align-items: center;
+      min-height: 52px;
+      padding: .75rem 1rem;
+      background: var(--yellow);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      font-family: Arial Black, Impact, sans-serif;
+      font-size: .92rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: .7rem 1rem;
+      background: var(--white);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      font-size: .85rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      transition: transform 120ms ease, box-shadow 120ms ease;
+    }
+
+    .nav-links a:hover,
+    .button:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #111111;
+    }
+
+    .nav-links a:active,
+    .button:active {
+      transform: translate(6px, 6px);
+      box-shadow: none;
+    }
+
+    .hero-bg {
+      width: 100%;
+      aspect-ratio: 16 / 5;
+      background-image: url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1920.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-bottom: var(--border);
+    }
+
+    @media (max-width:1024px) {
+      .hero-bg {
+        background-image: url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1024.webp");
+      }
+    }
+
+    @media (max-width:600px) {
+      .hero-bg {
+        background-image: url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-600.webp");
+      }
+    }
+
+    .content-wrapper {
+      padding-block: clamp(2rem, 1.5rem + 3vw, 4rem);
+    }
+
+    .intro-card,
+    .content-card {
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(1.25rem, 1rem + 2vw, 2.25rem);
+    }
+
+    .intro-card {
+      background: var(--surface);
+      margin-bottom: 1.5rem;
+    }
+
+    .content-card {
+      background: var(--surface-2);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: .5rem .8rem;
+      background: var(--brand);
+      color: var(--white);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      font-size: .76rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    .highlight {
+      display: inline;
+      background: var(--yellow);
+      padding: 0 .12em .04em;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: .95rem;
+      font-weight: 700;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: .7rem 1rem;
+      background: var(--yellow);
+      border: var(--border);
+      box-shadow: var(--shadow-md);
+      font-size: .85rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      transition: transform 120ms ease, box-shadow 120ms ease;
+    }
+
+    .back-link:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #111111;
+    }
+
+    .post-nav {
+      margin-top: 2rem;
+    }
+
+    .footer {
+      border-top: var(--border);
+      background: var(--white);
+      padding-block: 1.5rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .92rem;
+    }
+
+    .footer small {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .footer a {
+      font-weight: 900;
+      text-transform: uppercase;
+      border-bottom: 3px solid var(--brand);
+    }
+
+    .footer a:hover {
+      background: var(--brand);
+      color: var(--white);
+    }
+
+    @media (max-width: 700px) {
+      .site-nav .bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .site-logo {
+        justify-content: center;
+      }
+
+      .nav-links {
+        width: 100%;
+      }
+
+      .nav-links a,
+      .back-link {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-  <header>
-    <a href="/">Abort Supreme Court</a>
+  <header class="site-nav">
+    <div class="container bar">
+      <a href="../index.html" class="site-logo">
+        <strong>Abort the Supreme Court</strong>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../posts.html">Blog</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <article>
-      <h1>The Economics of Choice: What It Really Costs to Have a Child You Don’t Want</h1>
+  <div class="hero-bg" role="img" aria-label="Abort the Supreme Court logo banner"></div>
 
-      <p class="meta">
-        <time datetime="2026-04-26">April 26, 2026</time> · By Ashly Lorenzana
-      </p>
+  <main>
+    <section class="content-wrapper">
+      <div class="container">
+        <section class="intro-card">
+          <span class="eyebrow">Essay</span>
+          <h1>The <span class="highlight">Economics</span> of Choice: What It Really Costs to Have a Child You Don’t Want</h1>
+          <p class="meta">
+            <time datetime="2026-04-26">April 26, 2026</time> · By Ashly Lorenzana
+          </p>
+          <a class="back-link" href="../posts.html">Back to All Posts</a>
+        </section>
+
+        <article class="content-card">
 
       <p>There’s a tendency to talk about parenthood in emotional terms.</p>
 
@@ -188,12 +492,20 @@
 
       <p>In the difference between a life that fits, and one that doesn’t.</p>
 
-      <div class="nav">
-        <p>← <a href="/posts/what-it-means-to-be-truly-unwanted.html">Previous: What It Means to Be Truly Unwanted—and Why That Matters</a></p>
+      <div class="post-nav">
+        <a class="back-link" href="what-it-means-to-be-truly-unwanted.html">Previous: What It Means to Be Truly Unwanted—and Why That Matters</a>
       </div>
 
-    </article>
+        </article>
+      </div>
+    </section>
   </main>
 
+  <footer class="footer">
+    <div class="container footer-inner">
+      <small>© 2025 Abort the Supreme Court</small>
+      <small><a href="../privacy-policy.html">Privacy Policy</a></small>
+    </div>
+  </footer>
 </body>
 </html>
