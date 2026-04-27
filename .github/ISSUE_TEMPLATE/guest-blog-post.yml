@@ -58,7 +58,7 @@ body:
     id: other_theme
     attributes:
       label: If "Other," describe your theme
-      required: false
+      
 
   - type: dropdown
     id: anonymity
@@ -78,7 +78,7 @@ body:
       description: |
         Anything you do NOT want changed, emphasized, or removed?
         Any context we should be aware of?
-      required: false
+      
 
   - type: checkboxes
     id: consent
