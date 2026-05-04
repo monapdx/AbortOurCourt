@@ -1,123 +1,115 @@
-<img src="https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1920.jpg">
+<img src="https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1920.webp" alt="Abort the Supreme Court banner">
 
-# Abort Supreme Court
+# Abort the Supreme Court
 
-A growing, open resource hub for **reproductive justice**, **abortion access**, and women’s autonomy.
+A growing, open resource hub for **reproductive justice**, **abortion access**, and autonomy—built as a **static HTML site** with a curated toolkit library and a **blog** of essays on abortion, narrative, and choice.
 
 [➕ Submit a Resource](https://github.com/monapdx/AbortOurCourt/issues/new?template=add-resource.yml)
 
-> ⚠️ **Early Development**  
-> This project is in its early stages. Structure, content, and features are actively evolving.
+> **Active development**  
+> Content and layout continue to evolve. Pull requests and issue reports are welcome.
 
 ---
 
 ## Overview
 
-**<a href="https://abortsupremecourt.com">Abort Supreme Court</a>** is an effort to curate, organize, and make accessible **reputable, actionable resources** related to reproductive justice.
+**[Abort the Supreme Court](https://abortsupremecourt.com)** curates and surfaces **reputable, actionable material** related to reproductive justice: long-form writing, organizing toolkits, and pointers toward support and advocacy.
 
-**The long-term goal is simple:**
+**Goals:**
 
-> Help people—especially women—find real, trustworthy support when they need it most.
+- Make trustworthy resources **easier to find and use**
+- Publish **first-person and analytical essays** that complicate narrow abortion narratives
+- Host a **toolkit library** (embedded PDF previews) from established organizations, with clear credit to authors
 
-**This includes resources across a wide spectrum of needs, including but not limited to:**
-
-- Abortion access & providers  
-- Funding & financial assistance  
-- Legal support & rights information  
-- Emotional support & counseling  
-- Storytelling & lived-experience platforms  
-- Online training & education  
-- Political advocacy & organizing  
-- Stigma reduction & cultural conversation  
-
-This is not about reinventing the wheel.  
-It’s about **making the wheel easier to find, understand, and use**.
+This is not about reinventing the wheel. It is about **making the wheel easier to find, understand, and use**.
 
 ---
 
-## Why This Exists
+## Site structure (current)
 
-Access to reproductive care is often fragmented, confusing, or intentionally obscured.
+| Page | Path | Role |
+|------|------|------|
+| Home / speaking | [`index.html`](index.html) | Primary landing page: speaking, storytelling, collaboration, contact |
+| Blog index | [`posts.html`](posts.html) | Card grid of published essays with links into `/posts` |
+| Toolkits | [`toolkits.html`](toolkits.html) | Reproductive justice & abortion rights toolkit library (PDF embeds + “Open” links) |
+| Privacy | [`privacy-policy.html`](privacy-policy.html) | Privacy policy |
 
-**People are forced to:**
-- piece together information across dozens of sites  
-- determine credibility on their own  
-- navigate legal and financial barriers under pressure  
+**Additional HTML** (templates, internal pages, verification): `blank.html`, `comparison-table.html`, `pages/about.html`, `pages/resources.html`, `pages/toolkits.html`, `pages/full-width.html`, `pages/main-template.html`, `pages/check-your-state.html`, `pages/dependencies.html`, and `google4340c28baa72b51f.html` (search console).
 
-**Abort Supreme Court** aims to reduce that friction by:
-
-- **centralizing high-quality resources**
-- **organizing them in a usable, human way**
-- **prioritizing clarity over noise**
+**Shared design:** Main public pages use a consistent **neo-brutalist** look (high-contrast borders, offset shadows, yellow/pink/blue accents, sticky nav, full-width hero banner from `images/branding/` or hosted WebP on GitHub raw). Individual posts in `/posts` reuse the same shell (nav, hero, intro card, article card, footer).
 
 ---
 
-## Guiding Principles
+## Blog (`/posts`)
 
-- **Accuracy over volume** – Fewer, better resources
-- **Accessibility** – Easy to navigate, not overwhelming
-- **Respect for autonomy** – No moral framing, no persuasion
-- **Practical usefulness** – Real help, not just information
-- **Transparency** – Clear sourcing and categorization
+Essays are plain HTML files with metadata (Open Graph, JSON-LD `BlogPosting`). Each post includes **Previous** and **Next** links at the bottom that walk the series in order (with wrap from last → first).
 
----
+**Series order:**
 
-## Current State
+1. [`posts/seven-abortions-zero-tragedies.html`](posts/seven-abortions-zero-tragedies.html) — *I Had Seven Abortions—and None of Them Were a Tragedy*
+2. [`posts/stories-we-allow-vs-silence.html`](posts/stories-we-allow-vs-silence.html) — *The Stories We Allow vs. The Stories We Silence About Abortion*
+3. [`posts/abortion-as-preventative-care.html`](posts/abortion-as-preventative-care.html) — *Abortion as Preventative Care, Not Emergency Care*
+4. [`posts/what-it-means-to-be-truly-unwanted.html`](posts/what-it-means-to-be-truly-unwanted.html) — *What It Means to Be Truly Unwanted—and Why That Matters*
+5. [`posts/the-economics-of-choice.html`](posts/the-economics-of-choice.html) — *The Economics of Choice: What It Really Costs to Have a Child You Don’t Want*
+6. [`posts/abortion-made-my-life-possible.html`](posts/abortion-made-my-life-possible.html) — *Abortion Didn’t Ruin My Life. It Made the Life I Have Possible.*
 
-**Right now, this project is:**
-
-- A **static site + dataset** of resources
-- A **work-in-progress taxonomy** of categories and topics
-- A **foundation for future tools and interfaces**
-
-**Expect:**
-- rough edges  
-- incomplete sections  
-- ongoing restructuring  
+Navigation labels **Blog** in the header point at `posts.html` where these are listed.
 
 ---
 
-## Long-Term Vision
+## Toolkits
 
-**Over time, this project may evolve into:**
+[`toolkits.html`](toolkits.html) is a **directory page**: each item is a card with an embedded Drive preview (lazy-loaded) and an **Open** link to the source PDF. The page states that the site does **not** own these documents and encourages supporting the authoring organizations.
 
-- A **comprehensive, searchable resource directory**
-- Region-specific filtering (by state/country)
-- Comparison tools for services and organizations
-- Storytelling and submission pipelines
-- Contributor-driven expansion of resource categories
-- Toolkits for advocacy, education, and self-navigation
+---
 
-**But at its core, it will remain:**
+## Guiding principles
 
-> A curated, trustworthy entry point into reproductive justice resources.
+- **Accuracy over volume** — Fewer, better resources  
+- **Accessibility** — Readable layout, clear hierarchy  
+- **Respect for autonomy** — No moral framing, no persuasion  
+- **Practical usefulness** — Real help, not noise  
+- **Transparency** — Clear sourcing and credit  
+
+---
+
+## Long-term vision
+
+Possible directions:
+
+- A **searchable** resource directory with stronger taxonomy  
+- Region-specific filtering (state / country)  
+- More essays and static pages as content grows  
+- Contributor-driven expansion of toolkit and resource listings  
+
+Core intent stays the same: **a trustworthy entry point** into reproductive justice material.
 
 ---
 
 ## Contributing
 
-**Contributions are welcome, especially from people who:**
+**Especially welcome from people who:**
 
-- have experience navigating these systems
-- know of reputable organizations or tools
-- care about improving access and clarity
+- Navigate these systems in practice  
+- Know reputable organizations or tools  
+- Care about access and clarity  
 
 **Ways to contribute:**
 
-- <a href="https://github.com/monapdx/AbortOurCourt/issues/new?template=add-resource.yml">Add new resources</a>
-- Improve categorization
-- Flag outdated or incorrect information
-- Suggest new categories or features
+- [Add new resources](https://github.com/monapdx/AbortOurCourt/issues/new?template=add-resource.yml)  
+- Improve categorization or copy on existing pages  
+- Flag outdated or incorrect links (especially toolkit PDFs)  
+- Suggest new essays or resource sections  
 
-(Contribution guidelines coming soon.)
+(Detailed contribution guidelines can be added over time.)
 
 ---
 
-## Important Notes
+## Important notes
 
-- This project does **not** provide medical or legal advice.
-- Always verify information with official sources when possible.
-- Resource availability may vary by location and over time.
+- This project does **not** provide medical or legal advice.  
+- Always verify time-sensitive information with official sources.  
+- Toolkit PDFs are hosted by third parties; availability and URLs can change.  
 
 ---
 
@@ -127,8 +119,6 @@ Access to reproductive care is often fragmented, confusing, or intentionally obs
 
 ---
 
-## Final Note
+## Final note
 
-This project exists because access to information should not be a barrier to autonomy.
-
-If it helps even one person find what they need faster, with less confusion or isolation, it’s doing its job.
+Access to information should not be a barrier to autonomy. If this site helps someone find what they need with less confusion or isolation, it is doing its job.
