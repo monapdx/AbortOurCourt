@@ -1,0 +1,19 @@
+name: "Submit Your Story"
+description: "Use this form to share your abortion or reproductive justice story!"
+body:
+- type: input
+  id: name
+  attributes:
+    label: "Name"
+    placeholder: "Aliases are fine"
+- type: input
+  id: field_2
+  attributes:
+    label: "Location"
+    description: "City, State, Country"
+    placeholder: "As much as you feel like sharing"
+- type: textarea
+  id: field_3
+  attributes:
+    label: "Your Story"
+    placeholder: "Share only what you are comfortable with"
