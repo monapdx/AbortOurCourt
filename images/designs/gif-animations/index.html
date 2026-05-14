@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Childfree GIF Test</title>
+
+<style>
+  body {
+    margin: 0;
+    background: #111;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+
+  .gif-canvas {
+    width: 800px;
+    height: 450px;
+    position: relative;
+    background-image: url("neo-brutalist-background.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    font-family: Impact, "Arial Black", sans-serif;
+  }
+
+  .text {
+    position: absolute;
+    left: 90px;
+    right: 90px;
+    top: 165px;
+    text-align: center;
+    color: #111;
+    font-size: 72px;
+    line-height: 0.95;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 #ff4fd8;
+    animation: pop 1.8s infinite;
+  }
+
+  .small {
+    display: block;
+    margin-top: 18px;
+    font-size: 50px;
+    letter-spacing: 2px;
+    text-shadow: none;
+  }
+
+  @keyframes pop {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.035) rotate(-1deg);
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="gif-canvas">
+    <div class="text">
+      NOT LIKING CHILDREN
+      <span class="small">IS NOT A CRIME</span>
+    </div>
+  </div>
+</body>
+</html>
