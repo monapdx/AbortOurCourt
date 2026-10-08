@@ -466,7 +466,88 @@
       background-color: #e69dfc;
     }
 
-  </style>
+  /* Shared header and navigation */
+.site-nav { backdrop-filter: none; }
+.site-nav a { opacity: 1; }
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: #ffffff;
+      border-bottom: 4px solid #111111;
+    }
+
+    .site-nav .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .site-nav .site-logo {
+      display: inline-flex;
+      align-items: center;
+      min-height: 52px;
+      padding: .75rem 1rem;
+      background: #e69dfc;
+      border: 4px solid #111111;
+      box-shadow: 4px 4px 0 #111111;
+      font-family: Arial Black, Impact, sans-serif;
+      font-size: .92rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .site-nav .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      align-items: center;
+    }
+
+    .site-nav .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: .7rem 1rem;
+      background: #ffffff;
+      border: 4px solid #111111;
+      box-shadow: 4px 4px 0 #111111;
+      font-size: .85rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      transition: transform 120ms ease, box-shadow 120ms ease;
+    }
+
+    .site-nav .nav-links a:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #111111;
+    }
+
+    .site-nav .nav-links a:active {
+      transform: translate(6px, 6px);
+      box-shadow: none;
+    }
+
+
+    .site-nav { color: #111111; font-family: Inter, Arial, Helvetica, sans-serif; line-height: 1.65; }
+    .site-nav .container { width: min(100% - 2rem, 980px); }
+    .site-nav a { color: #111111; text-decoration: none; }
+    .site-nav .nav-links a:hover,
+    .site-nav .nav-links a:focus-visible { background-color: #e69dfc; }
+    .site-nav a:focus-visible { color: #111111; outline: 3px solid #ed0d92; outline-offset: 3px; }
+    @media (max-width: 700px) {
+      .site-nav .bar { flex-direction: column; align-items: stretch; }
+      .site-nav .site-logo { justify-content: center; }
+      .site-nav .nav-links { width: 100%; }
+      .site-nav .nav-links a { width: 100%; }
+    }
+
+
+</style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMHFXBZ696"></script>
