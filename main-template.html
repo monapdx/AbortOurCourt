@@ -83,82 +83,76 @@ a:hover{ text-decoration: underline; }
 }
 
 /* Header and navigation from index.html */
-    .site-nav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: #ffffff;
-      border-bottom: 4px solid #111111;
-    }
-
-    .site-nav .bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1rem 0;
-    }
-
-    .site-nav .site-logo {
-      display: inline-flex;
-      align-items: center;
-      min-height: 52px;
-      padding: .75rem 1rem;
-      background: #e69dfc;
-      border: 4px solid #111111;
-      box-shadow: 4px 4px 0 #111111;
-      font-family: Arial Black, Impact, sans-serif;
-      font-size: .92rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-
-    .site-nav .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .75rem;
-      align-items: center;
-    }
-
-    .site-nav .nav-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: .7rem 1rem;
-      background: #ffffff;
-      border: 4px solid #111111;
-      box-shadow: 4px 4px 0 #111111;
-      font-size: .85rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      transition: transform 120ms ease, box-shadow 120ms ease;
-    }
-
-    .site-nav .nav-links a:hover {
-      transform: translate(2px, 2px);
-      box-shadow: 2px 2px 0 #111111;
-    }
-
-    .site-nav .nav-links a:active {
-      transform: translate(6px, 6px);
-      box-shadow: none;
-    }
-
-
-    .site-nav { color: #111111; font-family: Inter, Arial, Helvetica, sans-serif; line-height: 1.65; }
-    .site-nav .container { width: min(100% - 2rem, 980px); }
-    .site-nav a { color: #111111; text-decoration: none; }
-    .site-nav .nav-links a:hover,
-    .site-nav .nav-links a:focus-visible { background-color: #e69dfc; }
-    .site-nav a:focus-visible { color: #111111; outline: 3px solid #ed0d92; outline-offset: 3px; }
-    @media (max-width: 700px) {
-      .site-nav .bar { flex-direction: column; align-items: stretch; }
-      .site-nav .site-logo { justify-content: center; }
-      .site-nav .nav-links { width: 100%; }
-      .site-nav .nav-links a { width: 100%; }
-    }
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #ffffff;
+  color: #111111;
+  border-bottom: 4px solid #111111;
+  font: 400 clamp(1rem, .95rem + .5vw, 1.125rem)/1.65 Inter, Arial, Helvetica, sans-serif;
+}
+.site-nav .container { width: min(100% - 2rem, 980px); }
+.site-nav .bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.site-nav a { color: inherit; text-decoration: none; }
+.site-nav a:hover { text-decoration: none; }
+.site-nav a:focus-visible { outline: 3px solid #ed0d92; outline-offset: 3px; }
+.site-nav .site-logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: .75rem 1rem;
+  background: #e69dfc;
+  border: 4px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+  font-family: Arial Black, Impact, sans-serif;
+  font-size: .92rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.site-nav .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  align-items: center;
+}
+.site-nav .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: .7rem 1rem;
+  background: #ffffff;
+  border: 4px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+  font-size: .85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.site-nav .nav-links a:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #111111;
+}
+.site-nav .nav-links a:active {
+  transform: translate(6px, 6px);
+  box-shadow: none;
+}
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible { background-color: #e69dfc; }
+@media (max-width: 700px) {
+  .site-nav .bar { flex-direction: column; align-items: stretch; }
+  .site-nav .site-logo { justify-content: center; }
+  .site-nav .nav-links { width: 100%; }
+  .site-nav .nav-links a { width: 100%; }
+}
 
 /* Hero (you already have the <picture> version).
    Here is a "background-image" variant that cannot overflow. */
@@ -176,6 +170,15 @@ a:hover{ text-decoration: underline; }
 
   </style>
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Site</title>
+  <link rel="preload" as="image" href="header-1920.webp">
+  <!-- paste CSS above into a <style> block or link a .css file -->
+</head>
 <body>
   <header class="site-nav">
     <div class="container bar">
@@ -183,7 +186,7 @@ a:hover{ text-decoration: underline; }
         <strong>Abort the Supreme Court</strong>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="/index.html">Home</a>
+        <a href="/index.html" aria-current="page">Home</a>
         <a href="/about.html">About</a>
         <a href="/posts.html">Blog</a>
         <a href="/toolkits.html">Toolkits</a>
@@ -211,17 +214,17 @@ a:hover{ text-decoration: underline; }
           <article class="card stack">
             <h3>Card Title</h3>
             <p><img src="" width=""></p>
-            <a class="button" aria-disabled="true">CLICK ME</a>
+            <a href="#" class="button">CLICK ME</a>
           </article>
           <article class="card stack">
             <h3>Card Title</h3>
             <p><img src="" width=""></p>
-            <a class="button" aria-disabled="true">CLICK ME</a>
+            <a href="#" class="button">CLICK ME</a>
           </article>
           <article class="card stack">
             <h3>Card Title</h3>
             <p><img src="" width=""></p>
-            <a class="button" aria-disabled="true">CLICK ME</a>
+            <a href="#" class="button">CLICK ME</a>
           </article>
         </div>
       </div>
@@ -243,11 +246,13 @@ a:hover{ text-decoration: underline; }
 
   <footer class="footer">
     <div class="container cluster" style="justify-content:space-between;">
-      <small>© 2026 Abort the Supreme Court</small>
-      <small><a href="/privacy-policy.html" aria-label="Privacy policy">Privacy</a></small>
+      <small>© 2025 Abort the Supreme Court</small>
+      <small><a href="privacy-policy.html" aria-label="Privacy policy">Privacy</a></small>
     </div>
   </footer>
   
   
 </body>
+</html>
+
 </html>

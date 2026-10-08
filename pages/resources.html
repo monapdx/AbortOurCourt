@@ -1,131 +1,258 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Abort the Supreme Court | Fight for Abortion Rights</title>
-<script>if(!window.mootrack){ !function(t,n,e,o,a){function d(t){var n=~~(Date.now()/3e5),o=document.createElement(e);o.async=!0,o.src=t+"?ts="+n;var a=document.getElementsByTagName(e)[0];a.parentNode.insertBefore(o,a)}t.MooTrackerObject=a,t[a]=t[a]||function(){return t[a].q?void t[a].q.push(arguments):void(t[a].q=[arguments])},window.attachEvent?window.attachEvent("onload",d.bind(this,o)):window.addEventListener("load",d.bind(this,o),!1)}(window,document,"script","https://cdn.stat-track.com/statics/moosend-tracking.min.js","mootrack"); } mootrack('loadForm', '70d98cc1179b41cbab50989b126801fb');</script>
-<link rel="stylesheet" href="style.css">
-<style type="text/css">
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abort the Supreme Court | Resources</title>
+  <style>
+    /* ===== Base / Reset ===== */
+:root{
+  --brand:#ed0d92;
+  --bg:#0b0f39;           /* matches your header’s midnight blue */
+  --bg-elev:#11122a;
+  --text:#e9e9ef;
+  --muted:#b9b9c7;
+  --link:var(--brand);
+  --ring: hsl(280 100% 70% / .6);
 
-</style>
+  /* Layout + type scale */
+  --container: 1120px;
+  --space-1: .5rem;  /* 8px rhythm */
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --radius: 14px;
+}
 
-<meta name="viewport" content="width=470, maximum-scale=1, user-scalable=no, target-densitydpi=device-dpi">
-  	<title></title> 
-  			<link href="demo-page.css" rel="stylesheet" media="all">
-		<link href="hover.css" rel="stylesheet" media="all">
-		<style type="text/css">
-@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*,
+*::before,
+*::after { box-sizing: border-box; }
 
-</style>
-<meta name="twitter:card" content="summary"></meta>
-<script>
-//load TrackerJS
-!function(t,n,e,o,a){function d(t){var n=~~(Date.now()/3e5),o=document.createElement(e);o.async=!0,o.src=t+"?ts="+n;var a=document.getElementsByTagName(e)[0];a.parentNode.insertBefore(o,a)}t.MooTrackerObject=a,t[a]=t[a]||function(){return t[a].q?void t[a].q.push(arguments):void(t[a].q=[arguments])},window.attachEvent?window.attachEvent("onload",d.bind(this,o)):window.addEventListener("load",d.bind(this,o),!1)}(window,document,"script","//cdn.stat-track.com/statics/moosend-tracking.min.js","mootrack");
-//tracker has to be initialized otherwise it will generate warnings and wont sendtracking events
-mootrack('init', '2445dd76-039a-4ab5-9cea-66ed88b35439');
-</script>
-<meta name="twitter:card" content="summary_large_image"><!-- required -->
-<meta name="twitter:site" content="@abortourcourt"><!-- required -->
+html, body { margin:0; padding:0; width:100%; overflow-x:hidden; background:var(--bg); color:var(--text); }
+img, picture, video { max-width:100%; height:auto; display:block; }
 
-<meta name="twitter:title" content="Post title"><!-- required -->
-<meta name="twitter:description" content="Post description ..."><!-- optional -->
-<meta name="twitter:image" content="https://raw.githubusercontent.com/ashloren/AbortOurCourt/main/abort-supreme-court.png"><!-- optional -->
-<meta name="twitter:image:alt" content="Image text description">
+/* Fluid Type */
+:root{
+  --step--1: clamp(.88rem, .86rem + .2vw, .98rem);
+  --step-0:  clamp(1rem,  .95rem + .5vw, 1.125rem);
+  --step-1:  clamp(1.25rem, 1.1rem + .9vw, 1.5rem);
+  --step-2:  clamp(1.5rem,  1.3rem + 1.4vw, 2rem);
+  --step-3:  clamp(1.9rem,  1.6rem + 2vw,  2.6rem);
+  --step-4:  clamp(2.4rem,  2rem + 2.8vw, 3.4rem);
+}
+body { font: 400 var(--step-0)/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji"; }
+
+h1,h2,h3{ line-height:1.15; margin:0 0 var(--space-2); }
+h1{ font-size:var(--step-4) }
+h2{ font-size:var(--step-3) }
+h3{ font-size:var(--step-2) }
+p{ margin:0 0 var(--space-2); color:var(--muted); }
+
+/* Links / buttons */
+a{ color:var(--link); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+.button{
+  display:inline-flex; align-items:center; gap:.6rem;
+  padding:.7rem 1.1rem; border-radius:var(--radius);
+  background:var(--brand); color:#111; font-weight:700; border:0;
+  box-shadow: 0 8px 24px rgba(237,13,146,.25);
+}
+.button:is(:hover,:focus-visible){ color:white;text-decoration:none;filter:brightness(1.08); }
+:focus-visible{ color:white;outline:3px solid var(--ring); outline-offset:3px; }
+
+/* Containers + layout utilities */
+.container{ width:min(100% - 2rem, var(--container)); margin-inline:auto; }
+.section{ padding-block: clamp(2.5rem, 2rem + 3vw, 5rem); }
+.stack > * + *{ margin-top: var(--space-3); }
+.cluster{ display:flex; flex-wrap:wrap; gap:var(--space-2); align-items:center; }
+.center{ text-align:center; }
+
+/* Cards / surfaces */
+.card{
+  background: var(--bg-elev);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+
+/* Grid that auto-fits */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-3);
+}
+
+/* Header and navigation from index.html */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #ffffff;
+  color: #111111;
+  border-bottom: 4px solid #111111;
+  font: 400 clamp(1rem, .95rem + .5vw, 1.125rem)/1.65 Inter, Arial, Helvetica, sans-serif;
+}
+.site-nav .container { width: min(100% - 2rem, 980px); }
+.site-nav .bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.site-nav a { color: inherit; text-decoration: none; }
+.site-nav a:hover { text-decoration: none; }
+.site-nav a:focus-visible { outline: 3px solid #ed0d92; outline-offset: 3px; }
+.site-nav .site-logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: .75rem 1rem;
+  background: #e69dfc;
+  border: 4px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+  font-family: Arial Black, Impact, sans-serif;
+  font-size: .92rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.site-nav .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  align-items: center;
+}
+.site-nav .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: .7rem 1rem;
+  background: #ffffff;
+  border: 4px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+  font-size: .85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.site-nav .nav-links a:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #111111;
+}
+.site-nav .nav-links a:active {
+  transform: translate(6px, 6px);
+  box-shadow: none;
+}
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible { background-color: #e69dfc; }
+@media (max-width: 700px) {
+  .site-nav .bar { flex-direction: column; align-items: stretch; }
+  .site-nav .site-logo { justify-content: center; }
+  .site-nav .nav-links { width: 100%; }
+  .site-nav .nav-links a { width: 100%; }
+}
+
+/* Hero (you already have the <picture> version).
+   Here is a "background-image" variant that cannot overflow. */
+.hero-bg{
+  width:100%;
+  aspect-ratio: 16/5;
+  background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1920.webp");
+  background-size:cover; background-position:center; background-repeat:no-repeat;
+}
+@media (max-width:1024px){ .hero-bg{ background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-1024.webp"); } }
+@media (max-width:600px){ .hero-bg{ background-image:url("https://raw.githubusercontent.com/monapdx/AbortOurCourt/refs/heads/main/images/branding/header-600.webp"); } }
+
+/* Footer */
+.footer{ color:var(--muted); border-top:1px solid rgba(255,255,255,.08); padding-block:2rem; }
+
+  </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abort Supreme Court | Resources</title>
+  <link rel="preload" as="image" href="header-1920.webp">
+  <!-- paste CSS above into a <style> block or link a .css file -->
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="support-grid"></div>
-
-<div class="container">
-  
-  <header role="banner">
-      <a class="toggle open" href="#nav">Menu</a>
-      <h1>Abort the Supreme Court</h1>
+  <header class="site-nav">
+    <div class="container bar">
+      <a href="/index.html" class="site-logo">
+        <strong>Abort the Supreme Court</strong>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/index.html" aria-current="page">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/posts.html">Blog</a>
+        <a href="/toolkits.html">Toolkits</a>
+        <a href="/index.html#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
- 
-    				<a href="news.html" class="hvr-bubble-float-bottom">News</a>
-				<a href="survey-results.html" class="hvr-bubble-float-bottom">Survey</a>
-				<a href="actions.html" class="hvr-bubble-float-bottom">Actions</a>
-				<a href="volunteering.html" class="hvr-bubble-float-bottom">Volunteer</a>
-				<a href="download.html" class="hvr-bubble-float-bottom">Resources</a>
+  <!-- Choose ONE hero: background-image OR <picture>. -->
+  <div class="hero-bg" role="img" aria-label="Abort the Supreme Court logo banner"></div>
 
+  <main>
+    <section class="section">
+      <div class="container center">
+        <h1>Headline</h1>
+        <p>Sub Headline</p>
+        
+      </div>
+    </section>
 
-  <section role="main"><h3>Abortion Care</h3><div class="container"><p><a class="cursive" href="https://www.abortionfinder.org/abortion-guides-by-state">Abortion Finder</a></p><p><a class="cursive" href="https://www.ineedana.com/">I Need an A</a></p><p><a class="cursive" href="https://aidaccess.org/">Aid Access</p><p><a class="cursive" href="https://www.plancpills.org/">Plan C</p><p><a class="cursive" href="https://abortionfunds.org/need-abortion/">National Network of Abortion Funds</a></p><p><a class="cursive" href="https://elevatedaccess.org/">Elevated Access</a></p><p><a class="cursive" href="https://digitaldefensefund.org/ddf-guides/abortion-privacy">Guide to Abortion Privacy</a></p></div>
-  
-  <h3>Laws, Legislation & Voting</h3><div class="container"><p><a class="cursive" href="https://www.acog.org/advocacy/abortion-is-essential/advocate-in-your-state/ballot-initiatives">Ballot Initiatives Impacting Abortion</a></p><p><a class="cursive" href="https://19thnews.org/2022/05/abortion-rights-restrictions-laws-in-your-state/?utm_campaign=19th-social&utm_content=curious_about_what_aborti&utm_medium=social&utm_source=twitter">What Abortion Restrictions & Laws Look Like in Every US State</a></p><p><a class="cursive" href="https://abortion-policies.srhr.org/?mapq=q1j">The Global Abortion Policies Database</a></p><p><a class="cursive" href="https://www.politico.com/news/2022/06/24/abortion-laws-by-state-roe-v-wade-00037695">Abortion Laws by State</a></p><p><a class="cursive" href="https://www.guttmacher.org/state-policy">State Legislation Tracker</a></p><p><a class="cursive" href="https://www.ifwhenhow.org/">Lawyering for Reproductive Justice</a></p><p><a class="cursive" href="https://reprolegaldefensefund.org/">Repro Legal Defense Fund</a></p><p></p><p></p><p></p><p></p><p><a class="cursive" href="https://didbidensayabortionyet.org/">Did Biden Say Abortion Yet?</a></p></div>
-  
-  
-  <h3>Maps, Visualizations, Infographics & Data</h3><div class="container"><p><a class="cursive" href="https://www.thecut.com/article/future-abortion-access-map.html">The Future of Abortions in America</a></p><p><a class="cursive" href="https://reproductiverights.org/global-trends-abortion-rights-2022-flyer/">Global Trends: Abortion Rights 2022</a></p><p><a class="cursive" href="https://www.nature.com/articles/d41586-022-02139-3">The Effects of Overturning Roe v. Wade</a></p><p><a class="cursive" href="https://www.ncrp.org/initiatives/movement-investment-project/our-active-movement-areas/reproductive-access-gendered-violence-movement/abortion-roadmap-intro/abortion-clinic-track-main-narrative/roadmap-abortion-clinic-track-data">Roadmap: Abortion Clinic Track</a></p><a class="cursive" href="https://www.ansirh.org/research/ongoing/turnaway-study">The Turnaway Study</a><p><a class="cursive" href="https://billmoyers.com/story/by-the-numbers-abortion-united-states/">By the Numbers: Abortion in the US</a></p><p><a class="cursive" href="https://newsroom.ucla.edu/stories/martie-haselton-what-really-drives-abortion-beliefs">What Really Drives Abortion Beliefs?</a></p><p><a class="cursive" href=""></a></p><p><a class="cursive" href=""></a></p><p><a class="cursive" href="https://reproreceipts.com/">Repro Receipts</a></p></div>
- 
+    <section id="work" class="section">
+      <div class="container">
 
- <h3>Abortion Rights Activism</h3><div class="container"><p><a class="cursive" href="https://www.exposefakeclinics.com/">Expose Fake Clinics</a></p><p><a class="cursive" href="https://prochoice.org/advocates/share-your-story/">National Abortion Federation</a></p><p><a class="cursive" href="https://www.aclu-or.org/en/reproductive-justice-community-hub">Reproductive Justice Community Hub </a></p><p></p><p></p><p></p><p><a class="cursive" href="https://www.ipas.org/">Partners for Reproductive Justice</a></p><p><a class="cursive" href="https://nextgenamerica.org/abortion-rights-actions/">NextGen America</a></p><p><a class="cursive" href="https://reproaction.org/take-action/?ss=37#listing">Repro Action</a></p></div>
-  
-  
-  <h3>Abortion Stigma</h3><div class="container"><p><a class="cursive" href="https://www.2plusabortions.com/for-people-seeking-abortions">2 + Abortions Worldwide</a></p><p><p><a class="cursive" href="https://www.makeinroads.org/">inroads</a></p></p><p><a class="cursive" href="https://www.all-options.org/">All Options</a></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div>
-  
-  <h3>Abortion Storytelling</h3><div class="container"><p><a class="cursive" href="https://shoutyourabortion.com/">Shout Your Abortion</a></p><p><a class="cursive" href="https://www.lilithfund.org/shareyourstory/">Lilith Fund</a></p><p><a class="cursive" href="https://www.womenonweb.org/en/yourstory">Women on Web</a></p><p><a class="cursive" href="https://reclaimproject.org/abortion-storytelling/">Reclaim Project</a></p><p><a class="cursive" href="https://www.theabortiondiary.com/share-your-abortion-story">The Abortion Diary</a></p>
-  <p><a class="cursive" href="https://docs.google.com/forms/d/e/1FAIpQLSfXXWMgm4d_i0VKGtNyOTZCAc1WNVMUchmx2Ml0S_t02QMMBA/viewform?c=0&w=1">Physicians for Reproductive Health</a></p><p><a class="cursive" href="https://exhaleprovoice.org/add-your-voice/">Exhale Pro-Voice</a></p>
-  <p><a class="cursive" href="https://www.tmiproject.org/storiesforchoice/">Stories for Choice</a></p>
-  <p><a class="cursive" href=""></a></p><p><a class="cursive" href="https://www.populationbalance.org/share-your-abortion-stories">Population Balance</a></p>
-  </div>
-  
-  <h3>Reproductive Rights Toolkits</h3><div class="container"><p><a class="cursive" href="https://www.amnestyusa.org/crisisaction/">Abortion Toolkit Crisis Action</a></p>
-<p><a class="cursive" href="https://avowtexas.org/lets-talk-about-abortion-toolkit/">Let’s Talk About Abortion Toolkit</a></p>
-<p><a class="cursive" href="https://www.westernstatescenter.org/our-work/we-are-brave/brave-toolkit">We Are BRAVE — Western States Center</a></p>
-<p><a class="cursive" href="https://www.ipas.org/resource/abortion-stigma-ends-here-a-toolkit-for-understanding-and-action/">Abortion stigma ends here</a></p>
-<p><a class="cursive" href="https://www.feminists.co/discover/reproductive-freedom-bsmph">Your Action Toolkit 🛠 To Protect Abortion Access</a></p>
-<p><a class="cursive" href="https://www.acog.org/advocacy/abortion-is-essential/come-prepared">How to Talk about Abortion</a></p>
-<p><a class="cursive" href="https://static1.squarespace.com/static/54f0cc4ee4b09385d0639fa7/t/62a10c220da7ff3ac6f08c29/1654721581492/CPC-Action-Toolkit-2.0.pdf">CPC Action Toolkit</a></p>
-<p><a class="cursive" href="https://www.aafront.org/wp-content/uploads/2022/07/OSA-Activity-Guide-and-Schedule-1.pdf">Operation Save Abortion</a></p>
-<p><a class="cursive" href="https://prh.org/reporterresource/">Resources for Journalists Reporting on Abortion</a></p>
-<p><a class="cursive" href="https://bolderadvocacy.org/wp-content/uploads/2018/01/BA-Reproductive-Rights-Toolkit.pdf">Reproductive Rights Toolkit</a></p>
-<p><a class="cursive" href="https://www.ifwhenhow.org/resources/abortion-providers-as-human-rights-defenders-toolkit/">Abortion Providers as Human Rights Defenders Toolkit</a></p>
-<p><a class="cursive" href="http://blackrj.org/wp-content/uploads/2017/02/Complete-Toolkit-Advancing-Reproductive-Rights-Health-and-Justice-with-Local-Resolutions.pdf">Advancing Reproductive Rights, Health, and Justice with Local Resolutions</a></p></div>
-  
-  <h3>Trans/Non-Binary Pregnancy</h3><div class="container">
-<p><a class="cursive" href="https://d3n8a8pro7vhmx.cloudfront.net/rainbowfamilies/pages/161/attachments/original/1557987113/Rainbow_Families_TGD_Guide_for_web.pdf?1557987113">Trans And Gender Diverse Parents Guide</a></p>
-<p><a class="cursive" href="https://www.thetaskforce.org/wp-content/uploads/2019/06/Queering-Reproductive-Justice-Mini-Toolkit.pdf">Queering Reproductive Justice: A Mini Toolkit</a></p>
-<p><a class="cursive" href="https://www.essentialaccess.org/sites/default/files/Providing-Inclusive-Care-for-LGBTQ-Patients.pdf">Providing Inclusive Care for LGBTQ Patients</a></p>
-<p><a class="cursive" href="https://dxfy8lrzbpywr.cloudfront.net/Files/97ecdaea-833d-4ea5-a891-c59f0ea429fb/ITEMS%2520report%2520final.pdf">Trans + Non Binary Experiences Of Maternity Services</a></p></div>
-  
-  <h3>Substance Use & Pregnancy</h3><div class="container"><p><a class="cursive" href="https://projects.propublica.org/graphics/maternity-drug-policies-by-state">How States Handle Drug Use During Pregnancy</a></p>
-<p><a class="cursive" href="https://www.guttmacher.org/state-policy/explore/substance-use-during-pregnancy#">Substance Use During Pregnancy</a></p>
-<p><a class="cursive" href="https://www.nationaladvocatesforpregnantwomen.org/wp-content/uploads/2022/06/1.Confronting-Pregnancy-Criminalization_6.22.23-1.pdf">Confronting Pregnancy Criminalization: A Practical Guide</a></p>
-<p><a class="cursive" href="https://harmreduction.org/issues/pregnancy-and-substance-use-a-harm-reduction-toolkit/">Pregnancy and Substance Use: A Harm Reduction Toolkit</a></p>
-</div>
+        <div class="grid">
+          <article class="card stack">
+            <h3>All Options</h3>
+            <p><img src="" width="">Peer support for pregnancy, abortion, adoption, and infertility.</p>
+            <a href="#" class="button">VISIT</a>
+          </article>
+          <article class="card stack">
+            <h3>M + A Hotline</h3>
+            <p><img src="" width="">Miscarriage and abortion hotline run by volunteer clinicians.</p>
+            <a href="#" class="button">VISIT</a>
+          </article>
+          <article class="card stack">
+            <h3>Exhale Pro-Voice</h3>
+            <p><img src="" width="">Emotional support resources for processing abortion experiences.</p>
+            <a href="#" class="button">VISIT</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  </section>
+    <section id="about" class="section">
+      <div class="container grid">
+        <div class="card stack">
+          <h2>About</h2>
+          <p>We are abortion rights activists & advocates that offer web and graphic design services tailored for repro justice orgs and movements.</p>
+        </div>
+        <div class="card stack">
+          <h2>Partnerships</h2>
 
-  <aside><div data-mooform-id="70d98cc1-179b-41cb-ab50-989b126801fb" ></div>
-     
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-
-  
-  </aside>
-
-  <footer>
-
-
-	  
-	  
-	  
-
-
-
-
-
-	  
+  <footer class="footer">
+    <div class="container cluster" style="justify-content:space-between;">
+      <small>© 2025 Abort the Supreme Court</small>
+      <small><a href="privacy-policy.html" aria-label="Privacy policy">Privacy</a></small>
+    </div>
   </footer>
   
-</div>
-<!-- partial -->
   
-</body>	
+</body>
+</html>
+
 </html>
