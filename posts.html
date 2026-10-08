@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abort the Supreme Court</title>
+  <title>Abort the Supreme Court | Blog</title>
   <style>
     /* ===== Base / Reset ===== */
 :root{
@@ -83,82 +83,76 @@ a:hover{ text-decoration: underline; }
 }
 
 /* Header and navigation from index.html */
-    .site-nav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: #ffffff;
-      border-bottom: 4px solid #111111;
-    }
-
-    .site-nav .bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1rem 0;
-    }
-
-    .site-nav .site-logo {
-      display: inline-flex;
-      align-items: center;
-      min-height: 52px;
-      padding: .75rem 1rem;
-      background: #e69dfc;
-      border: 4px solid #111111;
-      box-shadow: 4px 4px 0 #111111;
-      font-family: Arial Black, Impact, sans-serif;
-      font-size: .92rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-
-    .site-nav .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .75rem;
-      align-items: center;
-    }
-
-    .site-nav .nav-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: .7rem 1rem;
-      background: #ffffff;
-      border: 4px solid #111111;
-      box-shadow: 4px 4px 0 #111111;
-      font-size: .85rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      transition: transform 120ms ease, box-shadow 120ms ease;
-    }
-
-    .site-nav .nav-links a:hover {
-      transform: translate(2px, 2px);
-      box-shadow: 2px 2px 0 #111111;
-    }
-
-    .site-nav .nav-links a:active {
-      transform: translate(6px, 6px);
-      box-shadow: none;
-    }
-
-
-    .site-nav { color: #111111; font-family: Inter, Arial, Helvetica, sans-serif; line-height: 1.65; }
-    .site-nav .container { width: min(100% - 2rem, 980px); }
-    .site-nav a { color: #111111; text-decoration: none; }
-    .site-nav .nav-links a:hover,
-    .site-nav .nav-links a:focus-visible { background-color: #e69dfc; }
-    .site-nav a:focus-visible { color: #111111; outline: 3px solid #ed0d92; outline-offset: 3px; }
-    @media (max-width: 700px) {
-      .site-nav .bar { flex-direction: column; align-items: stretch; }
-      .site-nav .site-logo { justify-content: center; }
-      .site-nav .nav-links { width: 100%; }
-      .site-nav .nav-links a { width: 100%; }
-    }
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #ffffff;
+  color: #111111;
+  border-bottom: 4px solid #111111;
+  font: 400 clamp(1rem, .95rem + .5vw, 1.125rem)/1.65 Inter, Arial, Helvetica, sans-serif;
+}
+.site-nav .container { width: min(100% - 2rem, 980px); }
+.site-nav .bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.site-nav a { color: inherit; text-decoration: none; }
+.site-nav a:hover { text-decoration: none; }
+.site-nav a:focus-visible { outline: 3px solid #ed0d92; outline-offset: 3px; }
+.site-nav .site-logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: .75rem 1rem;
+  background: #e69dfc;
+  border: 4px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+  font-family: Arial Black, Impact, sans-serif;
+  font-size: .92rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.site-nav .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  align-items: center;
+}
+.site-nav .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: .7rem 1rem;
+  background: #ffffff;
+  border: 4px solid #111111;
+  box-shadow: 4px 4px 0 #111111;
+  font-size: .85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.site-nav .nav-links a:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #111111;
+}
+.site-nav .nav-links a:active {
+  transform: translate(6px, 6px);
+  box-shadow: none;
+}
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible { background-color: #e69dfc; }
+@media (max-width: 700px) {
+  .site-nav .bar { flex-direction: column; align-items: stretch; }
+  .site-nav .site-logo { justify-content: center; }
+  .site-nav .nav-links { width: 100%; }
+  .site-nav .nav-links a { width: 100%; }
+}
 
 /* Hero (you already have the <picture> version).
    Here is a "background-image" variant that cannot overflow. */
@@ -189,7 +183,7 @@ a:hover{ text-decoration: underline; }
   <header class="site-nav">
     <div class="container bar">
       <a href="/index.html" class="site-logo">
-        <strong>Abort the Supreme Court</strong>
+        <strong>Abort the Supreme Court | Blog</strong>
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
@@ -205,31 +199,13 @@ a:hover{ text-decoration: underline; }
   <div class="hero-bg" role="img" aria-label="Abort the Supreme Court logo banner"></div>
 
   <main>
-    <section class="section">
-      <div class="container">
-        <div class="hero-panel center">
-          <span class="eyebrow">Stories · Advocacy · Reproductive Justice</span>
-          <h1>
-            Work that <span class="highlight">refuses</span> to be quiet.
-          </h1>
-          <p>
-            A louder, sharper presentation of storytelling, advocacy, support work,
-            and reproductive justice participation.
-          </p>
-
-          <div class="hero-actions" style="justify-content:center;">
-            <a href="#work" class="button button-pink">See Featured Work</a>
-            <a href="#about" class="button button-dark">Get Involved</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <section id="work" class="section">
       <div class="container stack">
         <div class="center">
-          <span class="eyebrow">Latest Posts</span>
-          <h2>Recent writing from Abort the Supreme Court</h2>
+          <span class="eyebrow"></span>
+          <h2>Latest Posts</h2>
           <p>
             Essays on abortion autonomy, storytelling, and reproductive justice.
           </p>
@@ -237,97 +213,62 @@ a:hover{ text-decoration: underline; }
 
         <div class="grid">
           <article class="card stack">
-            <div class="card-label">Essay</div>
+            <div class="card-label"></div>
             <h3 class="center">I Had Seven Abortions—and None of Them Were a Tragedy</h3>
             <p class="center">
-              A personal essay about abortion, autonomy, relief, and refusing narrow expectations about "acceptable" abortion stories.
-            </p>
-            <a href="/posts/seven-abortions-zero-tragedies.html" class="card-link">Read Post</a>
+              
+            
+            <a href="/posts/seven-abortions-zero-tragedies.html" class="button">READ MORE</a></p>
           </article>
 
-          <article class="card stack">
-            <div class="card-label" style="background: var(--yellow);">Essay</div>
-            <h3 class="center">The Stories We Allow vs. The Stories We Silence About Abortion</h3>
-            <p class="center">
-              An exploration of which abortion narratives are amplified, which are silenced, and why autonomy-centered stories unsettle people.
-            </p>
-            <a href="/posts/stories-we-allow-vs-silence.html" class="card-link">Read Post</a>
-          </article>
-
-          <article class="card stack">
-            <div class="card-label" style="background: var(--green);">Essay</div>
-            <h3 class="center">Abortion as Preventative Care, Not Emergency Care</h3>
-            <p class="center">
-              A reframing of abortion as preventative care and what that reveals about autonomy, intention, and long-term life design.
-            </p>
-            <a href="/posts/abortion-as-preventative-care.html" class="card-link">Read Post</a>
-          </article>
-
-          <article class="card stack">
-            <div class="card-label" style="background: var(--brand); color: var(--white);">Essay</div>
-            <h3 class="center">What It Means to Be Truly Unwanted—and Why That Matters</h3>
-            <p class="center">
-              On the difference between being unexpected and unwanted, and why parenthood should be fully intentional.
-            </p>
-            <a href="/posts/what-it-means-to-be-truly-unwanted.html" class="card-link">Read Post</a>
-          </article>
-
-          <article class="card stack">
-            <div class="card-label" style="background: var(--blue);">Essay</div>
-            <h3 class="center">The Economics of Choice: What It Really Costs to Have a Child You Don’t Want</h3>
-            <p class="center">
-              A practical essay about the financial, emotional, and opportunity costs of having a child you do not want.
-            </p>
-            <a href="/posts/the-economics-of-choice.html" class="card-link">Read Post</a>
-          </article>
-
-          <article class="card stack">
-            <div class="card-label" style="background: var(--red); color: var(--white);">Essay</div>
-            <h3 class="center">Abortion Didn’t Ruin My Life. It Made the Life I Have Possible.</h3>
-            <p class="center">
-              A personal essay about abortion as preservation, autonomy, and the choices that made a chosen life possible.
-            </p>
-            <a href="/posts/abortion-made-my-life-possible.html" class="card-link">Read Post</a>
-          </article>
-          
           <article class="card stack">
             <div class="card-label" style="background: var(--yellow);"></div>
-            <h3 class="center"></h3>
+            <h3 class="center">The Stories We Allow vs. The Stories We Silence About Abortion</h3>
             <p class="center">
               
-            </p>
-            <a href="/posts/" class="card-link">Read Post</a>
+            <a href="/posts/stories-we-allow-vs-silence.html" class="button">READ MORE</a></p>
+          </article>
+
+          <article class="card stack">
+            <div class="card-label" style="background: var(--green);"></div>
+            <h3 class="center">Abortion as Preventative Care, Not Emergency Care</h3>
+            <p class="center">
+              
+            <a href="/posts/abortion-as-preventative-care.html" class="button">READ MORE</a></p>
+          </article>
+
+          <article class="card stack">
+            <div class="card-label" style="background: var(--brand); color: var(--white);"></div>
+            <h3 class="center">What It Means to Be Truly Unwanted—and Why That Matters</h3>
+            <p class="center">
+              
+            <a href="/posts/what-it-means-to-be-truly-unwanted.html" class="button">READ MORE</a></p>
+          </article>
+
+          <article class="card stack">
+            <div class="card-label" style="background: var(--blue);"></div>
+            <h3 class="center">The Economics of Choice: What It Really Costs to Have a Child You Don’t Want</h3>
+            <p class="center">
+              
+            <a href="/posts/the-economics-of-choice.html" class="button">READ MORE</a></p>
+          </article>
+
+          <article class="card stack">
+            <div class="card-label" style="background: var(--red); color: var(--white);"></div>
+            <h3 class="center">Abortion Didn’t Ruin My Life. It Made the Life I Have Possible.</h3>
+            <p class="center">
+              
+            <a href="/posts/abortion-made-my-life-possible.html" class="button">READ MORE</a></p>
           </article>
           
           
+          
+          
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container grid">
-        <div class="support-card discord stack">
-          <div class="card-label">Community</div>
-          <h2>Discord Server</h2>
-          <p>
-            Join our
-            <a href="https://discord.gg/MNNqWSnucV"><strong>Abortion Support Discord Server</strong></a>.
-          </p>
-          <a class="button button-pink" href="https://discord.gg/MNNqWSnucV">Join Discord</a>
-        </div>
 
-        <div class="support-card partnerships stack">
-          <div class="card-label">Collaborate</div>
-          <h2>Partnerships</h2>
-          <p>
-            Interested in a partnership? Email
-            <a href="mailto:abortsupremecourt@gmail.com"><strong>abortsupremecourt@gmail.com</strong></a>
-            with inquiries.
-          </p>
-          <a class="button" href="mailto:abortsupremecourt@gmail.com">Email Us</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
