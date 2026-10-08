@@ -1,0 +1,163 @@
+/* =========================
+   RESET + BASE
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, Inter, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background: #fff;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================
+   DESIGN TOKENS
+========================= */
+
+:root {
+  --max-width: 1100px;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+
+  --border: 1px solid #e5e7eb;
+
+  --text-sm: clamp(0.85rem, 0.8rem + 0.2vw, 0.95rem);
+  --text-base: clamp(1rem, 0.95rem + 0.3vw, 1.1rem);
+  --text-lg: clamp(1.25rem, 1.1rem + 0.5vw, 1.6rem);
+  --text-xl: clamp(1.75rem, 1.4rem + 1vw, 2.4rem);
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: var(--space-md);
+}
+
+.section {
+  padding-block: var(--space-xl);
+}
+
+.stack > * + * {
+  margin-top: var(--space-md);
+}
+
+/* =========================
+   GRID + FLEX
+========================= */
+
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.flex {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1 {
+  font-size: var(--text-xl);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: var(--text-lg);
+}
+
+p {
+  font-size: var(--text-base);
+  color: #444;
+}
+
+.small {
+  font-size: var(--text-sm);
+}
+
+/* =========================
+   COMPONENT BASICS
+========================= */
+
+.card {
+  padding: var(--space-md);
+  border: var(--border);
+  border-radius: var(--radius-md);
+  background: #fff;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6em 1em;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button.secondary {
+  background: #eee;
+  color: #111;
+}
+
+/* =========================
+   MEDIA + RESPONSIVENESS
+========================= */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Optional breakpoint (rarely needed) */
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

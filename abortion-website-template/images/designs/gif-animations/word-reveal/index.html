@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Typography GIF</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* MAIN GIF AREA */
+.canvas{
+    width:800px;
+    height:450px;
+
+    position:relative;
+
+    background-image:url("neo-brutalist-background.png");
+    background-size:cover;
+    background-position:center;
+
+    overflow:hidden;
+}
+
+/* TEXT CONTAINER */
+.text{
+    position:absolute;
+
+    left:70px;
+    right:70px;
+    top:165px;
+
+    text-align:center;
+
+    font-family:Impact, "Arial Black", sans-serif;
+    font-size:64px;
+    line-height:.92;
+
+    text-transform:uppercase;
+}
+
+/* EACH WORD */
+.text span{
+    display:inline-block;
+
+    opacity:0;
+
+    color:#111;
+
+    text-shadow:4px 4px 0 #ff4fd8;
+
+    animation:wordPop 4s infinite;
+    animation-delay:var(--delay);
+
+    animation-fill-mode:forwards;
+}
+
+/* ANIMATION */
+@keyframes wordPop{
+
+    0%{
+        opacity:0;
+        transform:translateY(20px) scale(.8);
+    }
+
+    10%{
+        opacity:1;
+        transform:translateY(0px) scale(1);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0px) scale(1);
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="canvas">
+
+    <div class="text">
+
+        <span style="--delay:.35s">NOT</span>
+
+        <span style="--delay:.75s">LIKING</span>
+
+        <span style="--delay:1.15s">CHILDREN</span>
+
+        <span style="--delay:1.55s">IS</span>
+
+        <span style="--delay:1.95s">NOT</span>
+
+        <span style="--delay:2.35s">A</span>
+
+        <span style="--delay:2.75s">CRIME</span>
+
+    </div>
+
+</div>
+
+</body>
+</html>
